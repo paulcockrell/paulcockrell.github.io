@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="description" content="NES.css is a NES-style CSS Framework." />
-    <meta name="keywords" content="html5,css,framework,sass,NES,8bit" />
-    <meta name="author" content="© 2018 B.C.Rikko" />
+    <meta name="description" content="Lockdown project diary." />
+    <meta name="keywords" content="lockdown,projects,espruino,banglejs,sacred,geometry,iot,javascript" />
+    <meta name="author" content="© 2020 Paul C" />
     <meta name="theme-color" content="#212529"/>
     <link rel="shortcut icon" type="image/png" href="favicon.png">
     <link rel="shortcut icon" sizes="196x196" href="favicon.png">
@@ -14,6 +14,7 @@
 
     <title>Lockdown project diary</title>
 
+    <link href="./lib/simple-grid.min.css" rel="stylesheet" />
     <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
     <link href="./style.css" rel="stylesheet" />
     <script src="./lib/vue.min.js"></script>
@@ -29,6 +30,72 @@
   </head>
 
   <body>
+    <div class="jumbotron">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 center">
+            <!-- Logo on the left -->
+            <div class="navbar-primary">	
+                <a href="https://nostalgic-css.github.io/NES.css/">
+                    <h1><i class="lockdown-logo brand-logo"></i>Lockdown project diary</h1>
+                </a>
+                <p>For prosperity, and inspiration</p>
+            </div>
+          </div>
+          <div class="col-3">
+            <!-- Supporting links on on the right -->
+            <div class="navbar-section">
+                <div class="social-buttons">
+                    <div class="share">
+                        <a href="https://www.linkedin.com/in/paul-g-35aa698/" target="_blank"><i class="nes-icon linkedin"></i></a>
+                        <a href="https://github.com/paulcockrell" target="_blank"><i class="nes-icon github"></i></a>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <header class="navbar navshadow" style="padding: 1rem;">
+      <!-- Logo on the left -->
+      <div class="navbar-primary">	
+          <a href="https://nostalgic-css.github.io/NES.css/">
+              <h1><i class="lockdown-logo brand-logo"></i>Lockdown project diary</h1>
+          </a>
+          <p>For prosperity, and inspiration</p>
+      </div>
+      <!-- Supporting links on on the right -->
+      <div class="navbar-section">
+          <div class="social-buttons">
+              <div class="share">
+                  <a href="https://www.linkedin.com/in/paul-g-35aa698/" target="_blank"><i class="nes-icon linkedin"></i></a>
+                  <a href="https://github.com/paulcockrell" target="_blank"><i class="nes-icon github"></i></a>
+              </div>
+          </div>
+      </div>
+    </header>
+    <div class="container">
+        <div class="columns">
+            <div class="column col-2"></div>
+            <div class="column col-8">
+                <div class="nav-brand">
+                    <a href="https://nostalgic-css.github.io/NES.css/">
+                        <h1><i class="lockdown-logo brand-logo"></i>Lockdown project diary</h1>
+                    </a>
+                    <p>For prosperity, and inspiration</p>
+                </div>
+
+                <div class="social-buttons">
+                    <div class="share">
+                        <a href="https://www.linkedin.com/in/paul-g-35aa698/" target="_blank"><i class="nes-icon linkedin"></i></a>
+                        <a href="https://github.com/paulcockrell" target="_blank"><i class="nes-icon github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="column col-2"></div>
+        </div>
+    </div>
     <div id="nescss">
       <header :class="{ sticky: scrollPos > 50 }">
         <div class="container">

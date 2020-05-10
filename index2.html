@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lockdown of 2020 - A developers project diary.">
+    <title>Lockdown &ndash; project diary</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.1/build/pure-min.css" integrity="sha384-QkSsJi6SGgWv5LAx1TdvIDRf8TW5Ui4NVKqDDlK1wY2eKioo7wvYIJvGWFQSFE4U" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.1/build/grids-responsive-min.css" crossorigin="anonymous" />
+    <script src="https://kit.fontawesome.com/9ab75a948a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+        <div class="header">
+            <img src="assets/me.png" alt="Me"/>
+            <h1 class="brand-title">Lockdown project diary</h1>
+            <h2 class="brand-tagline">For prosperity and inspiration</h2>
+            <div class="social">
+                <a href="https://www.linkedin.com/in/paul-g-35aa698/" target="_blank">
+                    <i class="fab fa-linkedin fa-lg"></i>
+                </a>
+                <a href="https://github.com/paulcockrell" target="_blank">
+                    <i class="fab fa-github fa-lg"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+            <div class="posts">
+                <h1 class="content-subhead">Introduction</h1>
+
+                <!-- A single blog post -->
+                <section class="post">
+                    <header class="post-header">
+                        <h2 class="post-title">What is the lockdown project diary?</h2>
+                    </header>
+
+                    <div class="post-description">
+                        <p>
+                            So the world has been put on lockdown, and neither Ironman nor Wonder woman turned up to save us all, which I think makes all those Marvel and DC documentaries misleading.
+                        </p>
+                        <p>
+                            Well.. what am I to do now I'm furloughed for an unknown period of time??
+                        </p>
+                        <p>
+                            I decided to put the time to good use, and get stuck in with some light-hearted coding and
+                            electronics projects.
+                        </p>
+                        <p>
+                            Hopefully some of them make you smile, and others may inspire you to flex your creative
+                            muscles and build your own amazing projects!
+                        </p>
+                    </div>
+                </section>
+            </div>
+
+            <!-- A wrapper for all the BangleJS blog posts -->
+            <div class="posts">
+                <h1 class="content-subhead">BangleJS</h1>
+
+                <!-- A single blog post -->
+                <section class="post">
+                    <header class="post-header">
+                        <h2 class="post-title">Introducing BangleJS</h2>
+                    </header>
+
+                    <div class="post-description">
+                        <p>
+                            You may or may not have heard about the brilliant opensource smart watch from
+                            <a href="http://www.espruino.com/" alt="Espruino website" target="_BLANK">Espruino</a> called the
+                            <a href="https://www.espruino.com/Bangle.js" alt="Bangle.js" target="_BLANK">Bangle.js</a>. I was
+                            a backer of the <a href="https://www.kickstarter.com/projects/gfw/banglejs-the-hackable-smart-watch">kickstarter campaign</a>
+                            and received mine just as the lock down kicked in <i class="nes-icon trophy"></i>.
+                        </p>
+                        <div class="post-images pure-g">
+                            <div class="pure-u-1-1">
+                                <div class="l-box">
+                                    <img alt="BangleJS watch"
+                                        class="pure-img"
+                                        src="assets/bangle-watch.jpg">
+                                </div>
+                            </div>
+                        </div>
+                        <p>
+                            It's a fantastic watch that is exreemely easy to develop apps for. You write your apps in Javascript, directly in the browser, and load into the watch
+                            wirelessly over bluetooth.
+                        </p>
+                        <p>
+                            That's right, it is SUPER EASY!.
+                        </p>
+                        <p>
+                            If you would like to purchase one, head on over to the <a href="https://shop.espruino.com/banglejs" target="_BLANK">Espruino shop</a> <i class="nes-icon coin"></i>
+                        </p>
+                    </div>
+                </section>
+            </div>
+
+            <div class="posts">
+                <section class="post">
+                    <header class="post-header">
+                        <h3 class="post-title">Project #1 - Mario Clock</h2>
+
+                        <p class="post-meta">
+                            By <a class="post-author" href="#">Paul C</a> under <a class="post-category post-category-js" href="#">JavaScript</a><a class="post-category post-category-banglejs" href="#">BangleJS</a>
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>
+                            The first project I created was a Gameboy inspired Mario watchface. As this is a watch, it seemed like the best place to begin, and I always wanted to design
+                            and create my own digital clock. This was inspired by an old 
+                            <a href="https://github.com/paulcockrell/espruino-mario-clock" target="_BLANK" rel="noopener" alt="Espruino Mario Project">microcontroller
+                            project</a> I did a few years back, which itself was inspired by a Mario watchface I had on my Pebble watch.
+                        </p>
+                        <p>
+                            In a nutshell it is an animated watchface, where Mario is running through a level with random scenery, and when the time increments every minute, he jumps and hits the blocks that show the time.
+                        </p>
+                        <div class="post-images pure-g">
+                            <div class="pure-u-1-1 pure-u-sm-1-2 pure-u-lg-1-3">
+                                <div class="l-box">
+                                    <img alt="Mario clock animation"
+                                        class="pure-img"
+                                        src="assets/marioclock/mario-clock.gif">
+                                </div>
+                            </div>
+                        </div>
+                        <p>
+                            This watchface is packed full of features, and I think the end result is quite splendid!
+                        </p>
+                        <h2>Day/night mode</h2>
+                        <p>
+                            We are all aware of the strain we put our eyes under with bright screens at night, so a dark mode was a must. It has three levels of darkness which
+                            are cycled through by swiping left.
+                        </p>
+                        <div class="post-images pure-g">
+                            <div class="pure-u-1-1 pure-u-sm-1-2 pure-u-lg-1-3">
+                                <div class="l-box">
+                                    <img alt="Mario clock day mode"
+                                        class="pure-img"
+                                        src="assets/marioclock/marioclock-lightmode.png">
+                                </div>
+                            </div>
+                            <div class="pure-u-1-1 pure-u-sm-1-2 pure-u-lg-1-3">
+                                <div class="l-box">
+                                    <img alt="Mario clock night mode"
+                                        class="pure-img"
+                                        src="assets/marioclock/marioclock-darkmode.png">
+                                </div>
+                            </div>
+                        </div>
+                        <h2>Multiple characters</h2>
+                        <p>
+                            Mario is great, but we also love Toad and Daisy, so we have them all! To cycle through the characters you swipe the screen right. What ever is you choose is saved, so if you navigate to another app and return to this default watchface, your character will be selected automatically.
+                        </p>
+                        <div class="post-images pure-g">
+                            <div class="pure-u-1-1 pure-u-sm-1-2 pure-u-lg-1-3">
+                                <div class="l-box">
+                                    <img alt="Mario clock Mario character"
+                                        class="pure-img"
+                                        src="assets/marioclock/mario-clock-mario.png">
+                                </div>
+                            </div>
+                            <div class="pure-u-1-1 pure-u-sm-1-2 pure-u-lg-1-3">
+                                <div class="l-box">
+                                    <img alt="Mario clock Toad character"
+                                        class="pure-img"
+                                        src="assets/marioclock/mario-clock-toad.png">
+                                </div>
+                            </div>
+                            <div class="pure-u-1-1 pure-u-sm-1-2 pure-u-lg-1-3">
+                                <div class="l-box">
+                                    <img alt="Mario clock Daisy character"
+                                        class="pure-img"
+                                        src="assets/marioclock/mario-clock-daisy.png">
+                                </div>
+                            </div>
+                        </div>
+                        <h2>Information panel</h2>
+                        <p>
+                            The screen is configured to use its lowest resolution - 80x80. This does not leave us with much space to display different information. So I implemented an information panel at the top of the watchface. This panel can show multiple peices of information by pressing button-1 on the watch, which cycles through the following:
+                            <ul>
+                                <li>Date</li>
+                                <li>Battery level</li>
+                                <li>Temperature</li>
+                                <li>Phone connectivity (more on this later!)</li>
+                            </ul>
+                        </p>
+                        <div class="post-images pure-g">
+                            <div class="pure-u-1-1 pure-u-sm-1-2 pure-u-lg-1-3">
+                                <div class="l-box">
+                                    <img alt="Mario clock date"
+                                        class="pure-img"
+                                        src="assets/marioclock/mario-clock-mario.png">
+                                </div>
+                            </div>
+                            <div class="pure-u-1-1 pure-u-sm-1-2 pure-u-lg-1-3">
+                                <div class="l-box">
+                                    <img alt="Mario clock battery level"
+                                        class="pure-img"
+                                        src="assets/marioclock/mario-clock-battery.png">
+                                </div>
+                            </div>
+                            <div class="pure-u-1-1 pure-u-sm-1-2 pure-u-lg-1-3">
+                                <div class="l-box">
+                                    <img alt="Mario clock temperature"
+                                        class="pure-img"
+                                        src="assets/marioclock/mario-clock-temperature.png">
+                                </div>
+                            </div>
+                            <div class="pure-u-1-1 pure-u-sm-1-2 pure-u-lg-1-3">
+                                <div class="l-box">
+                                    <img alt="Mario clock Daisy character"
+                                        class="pure-img"
+                                        src="assets/marioclock/mario-clock-phone.png">
+                                </div>
+                            </div>
+                        </div>
+                        <h2>Mobile phone connectivity</h2>
+                        <p>
+                            This works with Android only, through a mobile app called <a href="https://gadgetbridge.org/" alt="Gadget Bridge" target="_BLANK">Gadget Bridge</a>.
+                            It allows messages to be passed between the mobile phone and the watch over bluetooth.
+                        </p>
+                        <p>
+                            This watch face will let you know when you get a text or a phone call, it scrolls the caller/sender and message/phone
+                            number on the information panel, while the character has a speech bubble with an icon showing the communication type, and the watch will buzz for a few seconds.
+                        </p>
+                        <div class="post-images pure-g">
+                            <div class="pure-u-1-1 pure-u-sm-1-2 pure-u-lg-1-3">
+                                <div class="l-box">
+                                    <img alt="Mario clock text message"
+                                        class="pure-img"
+                                        src="assets/marioclock/mario-clock-text-message.png">
+                                </div>
+                            </div>
+                            <div class="pure-u-1-1 pure-u-sm-1-2 pure-u-lg-1-3">
+                                <div class="l-box">
+                                    <img alt="Mario clock phone call"
+                                        class="pure-img"
+                                        src="assets/marioclock/mario-clock-phone-call.png">
+                                </div>
+                            </div>
+                        </div>
+                        <h2>Low battery</h2>
+                        <p>
+                            If the watch battery drops bellow 10% the watch will show a message on the information pannel and the character shows a battery icon in a speech bubble. The watch will vibrate to make sure you get the message. It will repeat every ten minutes until it dies or you plug in the charger.
+                        </p>
+                        <div class="post-images pure-g">
+                            <div class="pure-u-1-1 pure-u-sm-1-2 pure-u-lg-1-3">
+                                <div class="l-box">
+                                    <img alt="Mario clock low battery"
+                                        class="pure-img"
+                                        src="assets/marioclock/mario-clock-low-battery.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="posts">
+                <section class="post">
+                    <header class="post-header">
+                        <h3 class="post-title">Project #2 - Astrocalc</h2>
+
+                        <p class="post-meta">
+                            By <a class="post-author" href="#">Paul C</a> under <a class="post-category post-category-js" href="#">JavaScript</a><a class="post-category post-category-banglejs" href="#">BangleJS</a>
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>
+                            View information about the Sun and Moon, such as position in the sky, rise & set times and much more based on your GPS data.
+                        </p>
+                        <p>
+                            <i>To be completed...</i>
+                        </p>
+                    </div>
+                </section>
+            </div>
+
+            <div class="posts">
+                <section class="post">
+                    <header class="post-header">
+                        <h3 class="post-title">Project #3 - Buffgym</h2>
+
+                        <p class="post-meta">
+                            By <a class="post-author" href="#">Paul C</a> under <a class="post-category post-category-js" href="#">JavaScript</a><a class="post-category post-category-banglejs" href="#">BangleJS</a>
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>
+                            This gym training assistant trains you on the famous <a href="https://stronglifts.com/5x5/" alt="Stronglifts 5x5" target="_BLANK">Stronglifts 5x5</a> workout program
+                        </p>
+                        <p>
+                            <i>To be completed...</i>
+                        </p>
+                    </div>
+                </section>
+            </div>
+
+            <div class="posts">
+                <section class="post">
+                    <header class="post-header">
+                        <h3 class="post-title">Project #4 - Dotmatrix clock</h2>
+
+                        <p class="post-meta">
+                            By <a class="post-author" href="#">Paul C</a> under <a class="post-category post-category-js" href="#">JavaScript</a><a class="post-category post-category-banglejs" href="#">BangleJS</a>
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <p>
+                            A clock face simulating the classic dotmatrix displays. Shows time, date, compass, and heart rate.
+                        </p>
+                        <p>
+                            <i>To be completed...</i>
+                        </p>
+                    </div>
+                </section>
+            </div>
+
+            <!-- A wrapper for all the Home IOT blog posts -->
+            <div class="posts">
+                <h1 class="content-subhead">IOT</h1>
+
+                <!-- A single blog post -->
+                <section class="post">
+                    <header class="post-header">
+                        <h2 class="post-title">Home IOT with Arduino</h2>
+                    </header>
+
+                    <div class="post-description">
+                        <p>
+                            Home IOT project using Arduinos to record environmental readings
+                        </p>
+                        <p>
+                            <i>To be completed...</i>
+                        </p>
+                    </div>
+                </section>
+            </div>
+
+            <!-- A wrapper for all the Sacred Geometry blog posts -->
+            <div class="posts">
+                <h1 class="content-subhead">Sacred Geometry</h1>
+
+                <!-- A single blog post -->
+                <section class="post">
+                    <header class="post-header">
+                        <h2 class="post-title">Investigating Sacred Geometry for relaxation</h2>
+                    </header>
+
+                    <div class="post-description">
+                        <p>
+                            Sacred Geometry is really fascinating, and the pictures you produce are exceptional.
+                        </p>
+                        <p>
+                            <i>To be completed...</i>
+                        </p>
+                    </div>
+                </section>
+            </div>
+
+            <!-- A wrapper for all the Farsi blog posts -->
+            <div class="posts">
+                <h1 class="content-subhead">Farsi</h1>
+
+                <!-- A single blog post -->
+                <section class="post">
+                    <header class="post-header">
+                        <h2 class="post-title">Learning the Farsi (Persian) alphabet</h2>
+                    </header>
+
+                    <div class="post-description">
+                        <p>
+                            I am left handed, and there are only a couple languages in the world that have a script that is written from right to left.
+                            This is intruinging to me and wanted to see if it felt more natural to write this way (my assumption was yes).
+                            So I picked Farsi (Persian) which is an Indo-European language, which means it has all the familiar sounds like in English,
+                            but it uses a variant of the Arabic script, which is written from right to left, and exceptionally beautiful.
+                        </p>
+                        <p>
+                            <i>To be completed...</i>
+                        </p>
+                    </div>
+                </section>
+            </div>
+
+            <div class="footer">
+                <div class="pure-menu pure-menu-horizontal">
+                    <ul>
+                        <li class="pure-menu-item"><a href="/about.html" class="pure-menu-link">About</a></li>
+                        <li class="pure-menu-item"><a href="https://www.linkedin.com/in/paul-g-35aa698/" class="pure-menu-link" target="_BLANK">LinkedIn</a></li>
+                        <li class="pure-menu-item"><a href="http://github.com/paulcockrell/" class="pure-menu-link" target="_BLANK">GitHub</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
