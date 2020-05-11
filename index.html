@@ -20,10 +20,10 @@
             <h1 class="brand-title">Lockdown project diary</h1>
             <h2 class="brand-tagline">For prosperity and inspiration</h2>
             <div class="social">
-                <a href="https://www.linkedin.com/in/paul-g-35aa698/" target="_blank">
+                <a href="https://www.linkedin.com/in/paul-g-35aa698/" aria-label="Linkedin" target="_blank">
                     <i class="fab fa-linkedin fa-lg"></i>
                 </a>
-                <a href="https://github.com/paulcockrell" target="_blank">
+                <a href="https://github.com/paulcockrell" aria-label="Github" target="_blank">
                     <i class="fab fa-github fa-lg"></i>
                 </a>
             </div>
@@ -563,8 +563,84 @@
                         <p>
                             Home IOT project using Arduinos to record environmental readings
                         </p>
+                        <aside>
+                            The most important thing I learnt from this spike was to use <a href="https://platformio.org/" alt="PlatformIO" target="_BLANK">PlatformIO</a> VSCode plugin for development. Typically you use the (very) basic Arduino editor which offers no help. The PlatformIO plugin is simply amazing, offering all the common modern IDE features, and helps you to write and run <b>unit tests</b> for your arduino projects!
+                        </aside>
+                        <h3>Project summary</h3>
                         <p>
-                            <i>To be completed...</i>
+                            This was more of a spike to see what I can do with the electronics components I had lying around in various boxes.
+                            I wanted to see if I could setup some sort of simple wireless environmental sensor network and have the data consumed and published up to Google IOT services for storage and presentation.
+                        </p>
+                        <p>
+                            I searched the internet for tutorials doing this sort of thing, and after combining them together I ended up with this functioning project.
+                        </p>
+                        <h3>Hardware</h3>
+                        <p>
+                            I found the impressive esp8266 wireless module and a few Arduino Nanos, some HC12 transievers and a couple DHT11/22 sensors. This appeared to be all I needed to get the project started.
+                            So to begin with I needed a 'hub' to which all the remote wireless sensors would transmit the sensor data to, and in turn was connected to the internet.
+                            This was ideal for the esp8266 module, to which I connected a HC12 transiever.
+                        </p>
+                        <h3>Cloud setup</h3>
+                        <p>
+                            The next step was to write some code that connected the device to my home wireless network and authenticate with Google IOT. This required all the necessary provisioning of services on Google Cloud, such as:
+                            <ul>
+                                <li>
+                                    IOT Core
+                                </li>
+                                <li>
+                                    MQTT Pub/Sub
+                                </li>
+                            </ul>
+                        </p>
+                        <h3>Construction</h3>
+                        <p>
+                            Now that the esp8266 was on the network and authenticated and communicating with Google IOT services it was time to make the remote sensors. These were simple to setup, just connect an Arduino Nano to a DHT11 sensor (which collects temperature and humidity) and the HC12 wireless module.
+                            It is important that all the HC12 modules are opperating on the same channel, baud rate etc. I chose configuration 'FU4' which is for long range comms, these settings are configured using AT commands through a serial connection.
+                        </p>
+                        <p>
+                            With the sensors transmitting data, and the hub device collecting and publishing them to the message queue on Google, it was time to process, store and render the data!
+                        </p>
+                        <h4>Arduino Nano + DHT11 + HC12 sensor transmitter</h4>
+                        <div class="post-images pure-g">
+                            <div class="pure-u-1-1 pure-u-sm-1-2 pure-u-lg-1-3">
+                                <div class="l-box">
+                                    <img alt="Home IOT sensor transmitter"
+                                        class="pure-img lazy"
+                                        src="assets/placeholder.png"
+                                        data-src="assets/homeiot/homeiot-sensor-transmitter.png">
+                                </div>
+                            </div>
+                        </div>
+                        <h4>Huzzah ESP8266 + HC12 receiver 'hub'</h4>
+                        <div class="post-images pure-g">
+                            <div class="pure-u-1-1 pure-u-sm-1-2 pure-u-lg-1-3">
+                                <div class="l-box">
+                                    <img alt="Home IOT hub"
+                                        class="pure-img lazy"
+                                        src="assets/placeholder.png"
+                                        data-src="assets/homeiot/homeiot-receiver.png">
+                                </div>
+                            </div>
+                        </div>
+                        <h3>Cloud processing, storage and presentation</h3>
+                        <p>
+                            I used Googles Firebase for this step. In here I created a serverless-function to process the messages that come in on the message queue, and persist them to the real-time database I setup.
+                            With the messages persisted, I then put together a simple webpage (hosted in Firebase) to render a section of the latest data in graphs.
+                        </p>
+                        <div class="post-images pure-g">
+                            <div class="pure-u-1-1 pure-u-sm-1-2 pure-u-lg-1-3">
+                                <div class="l-box">
+                                    <img alt="Home IOT webpage"
+                                        class="pure-img lazy"
+                                        src="assets/placeholder.png"
+                                        data-src="assets/homeiot/homeiot-webpage.png">
+                                </div>
+                            </div>
+                        </div>
+                        <h3>Conclusion</h3>
+                        <p>
+                            This was a nice little project, that had its learning curves i'll be honest, especially when it comes to the HC12's.. they can be very fussy in their physical setup to get working, such as aerials types, aerial position and orientation, distance etc.
+                            There are plenty of tutorials on doing projects just like this, I usually head over to <a href="https://www.instructables.com/" alt="Instructables" target="_BLANK">Instructables</a> which has many great projects for you to follow.
                         </p>
                     </div>
                 </section>
@@ -585,8 +661,30 @@
                             Sacred Geometry is really fascinating, and the pictures you produce are exceptional.
                         </p>
                         <p>
-                            <i>To be completed...</i>
+                            After doing a lot of coding after the first four weeks of lockdown, I needed to take a break and decompress. I was working more hours than I would at work, and also working seven days a week.. It was hard to stop I was enjoying it all so much.
+                            But still I decided to relax with some drawing, in particular some Sacred Geometry. It is very theraputic, as all you need is a compass, ruler, and a pen. No artistic skills need for this!
                         </p>
+                        <p>
+                            What makes this way of drawing special is that the pictures are mathematically perfect, everything is a ratio of something else you draw before-hand. You can only create distances by existing line intersections. You have to watch a video of one being drawn to understand what I mean.
+                        </p>
+                        <p>
+                            I found this fantastic channel on Youtube by <a href="https://www.youtube.com/channel/UCUfc5V23Oy_XD99LHYPvp4Q" alt="Dearing Wang" target="_BLANK">Dearing Wang</a> that is full of timelapse videos of the art being drawn, that you can follow along to.
+                        </p>
+                        <aside>
+                            This is the particular video I followed for my drawing: <a href="https://youtu.be/LkhAELXEcCU" alt="Dearing Wang Pentagram tutorial" target="_BLANK">Pentagram within Pentagram tutorial</a>
+                        </aside>
+                        <h3>Completed drawing</h3>
+                        <p>It took three days, dipping in and out of the drawing. And I also did some of my own patterns as part of experimentation.</p>
+                        <div class="post-images pure-g">
+                            <div class="pure-u-1-1 pure-u-sm-1-2 pure-u-lg-1-3">
+                                <div class="l-box">
+                                    <img alt="Sacred Geometry Pentagrams"
+                                        class="pure-img lazy"
+                                        src="assets/placeholder.png"
+                                        data-src="assets/sacredgeometry/pentagram.png">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </div>
@@ -609,8 +707,22 @@
                             but it uses a variant of the Arabic script, which is written from right to left, and exceptionally beautiful.
                         </p>
                         <p>
-                            <i>To be completed...</i>
+                            I completed the book and I have to say it is fantastic, I have many other books but I get lost in the gramar and unfamiliar script and words.
+                            This just teaches you the alphabet and gives you the ability read words (even if you don't know their translation). It is a great place to start.
                         </p>
+                        <aside>
+                            You can order a copy of the book from <a href="https://www.amazon.co.uk/dp/1473680026" alt="Persian script hacking" target="_BLANK">Amazon</a>
+                        </aside>
+                        <div class="post-images pure-g">
+                            <div class="pure-u-1-1 pure-u-sm-1-2 pure-u-lg-1-3">
+                                <div class="l-box">
+                                    <img alt="Persian script hacking"
+                                        class="pure-img lazy"
+                                        src="assets/placeholder.png"
+                                        data-src="assets/farsi/farsi-book.jpg">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </div>
