@@ -63,6 +63,18 @@ h3 {
     padding: 0 1em 1em 0;
 }
 
+aside {
+    background: #f82b76;
+    margin: 1em 0;
+    padding: .3em 1em;
+    border-radius: 3px;
+    color: #fff;
+}
+aside a {
+    color: rgb(61, 79, 93);
+    font-weight: bold;
+}
+
 .nav-list {
     margin: 0;
     padding: 0;
