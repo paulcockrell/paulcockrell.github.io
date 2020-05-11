@@ -60,7 +60,7 @@ h3 {
     color: rgb(176, 202, 219);
 }
 .l-box {
-    padding: 1em;
+    padding: 0 1em 1em 0;
 }
 
 .nav-list {
@@ -116,7 +116,6 @@ h3 {
     margin-left: 1em;
 }
 .post-description {
-    font-family: Georgia, "Cambria", serif;
     color: #444;
     line-height: 1.8em;
 }

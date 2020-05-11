@@ -274,11 +274,91 @@
 
                     <div class="post-description">
                         <p>
-                            View information about the Sun and Moon, such as position in the sky, rise & set times and much more based on your GPS data.
+                            View information about the Sun and Moon, such as position in the sky, rise & set times and much more based
+                            on your GPS position and date.
                         </p>
                         <p>
-                            <i>To be completed...</i>
+                            This little app is good fun if you like to know the times and technical terms and phases the Sun and Moon go through, for the present day. Such as the current moon phase, the position of the Sun and moon in respect to the earth and so on.
+                            The maths that drives this came from the <a href="https://github.com/mourner/suncalc" alt="Suncalc library" target="_BLANK">Suncalc</a> library that was slightly modified to run on the BangleJS (and some issues corrected). I am in no way clever enough for this sort of maths, what I really did was add a nice watch-friendly
+                            display over the top of it.
                         </p>
+                        <p>
+                            When it boots it reads your GPS position (or you can skip this if you have a previous GPS lock), and then presents a menu for you
+                            to navigate through to learn about the Sun and Moons details for today.
+                        </p>
+                        <h2>Splash screen</h2>
+                        <p>
+                            Waits for the watch to get a GPS lock, or if you have previously had a GPS lock it will offer you the option to use that.
+                        </p>
+                        <div class="post-images pure-g">
+                            <div class="pure-u-1-1 pure-u-sm-1-2 pure-u-lg-1-3">
+                                <div class="l-box">
+                                    <img alt="Mario clock text message"
+                                        class="pure-img"
+                                        src="assets/astrocalc/astrocalc-splash-screen.png">
+                                </div>
+                            </div>
+                        </div>
+                        <h2>Main menu</h2>
+                        <p>
+                            Gives you the options to view information on either the Sun or the Moon.
+                        </p>
+                        <div class="post-images pure-g">
+                            <div class="pure-u-1-1 pure-u-sm-1-2 pure-u-lg-1-3">
+                                <div class="l-box">
+                                    <img alt="Mario clock phone call"
+                                        class="pure-img"
+                                        src="assets/astrocalc/astrocalc-main-menu.png">
+                                </div>
+                            </div>
+                        </div>
+                        <h2>Sun</h2>
+                        <p>
+                            You are presented with a menu for all the details you can learn about for the Sun, for your location and today. On selecting an option you get a graphic showing the Suns position around the earth, where the top of the circle is noon.
+                        </p>
+                        <div class="post-images pure-g">
+                            <div class="pure-u-1-1 pure-u-sm-1-2 pure-u-lg-1-3">
+                                <div class="l-box">
+                                    <img alt="Mario clock phone call"
+                                        class="pure-img"
+                                        src="assets/astrocalc/astrocalc-sun-menu.png">
+                                </div>
+                            </div>
+                            <div class="pure-u-1-1 pure-u-sm-1-2 pure-u-lg-1-3">
+                                <div class="l-box">
+                                    <img alt="Mario clock phone call"
+                                        class="pure-img"
+                                        src="assets/astrocalc/astrocalc-sun-position.png">
+                                </div>
+                            </div>
+                        </div>
+                        <h2>Moon</h2>
+                        <p>
+                            You are presented with a menu for all the details you can learn about for the Moon, for your location and today. On selecting an option you get a graphic showing the Moon position around the earth, where the top of the circle is noon. And also the current phase the Moon is in.
+                        </p>
+                        <div class="post-images pure-g">
+                            <div class="pure-u-1-1 pure-u-sm-1-2 pure-u-lg-1-3">
+                                <div class="l-box">
+                                    <img alt="Mario clock text message"
+                                        class="pure-img"
+                                        src="assets/astrocalc/astrocalc-moon-menu.png">
+                                </div>
+                            </div>
+                            <div class="pure-u-1-1 pure-u-sm-1-2 pure-u-lg-1-3">
+                                <div class="l-box">
+                                    <img alt="Mario clock phone call"
+                                        class="pure-img"
+                                        src="assets/astrocalc/astrocalc-moon-position.png">
+                                </div>
+                            </div>
+                            <div class="pure-u-1-1 pure-u-sm-1-2 pure-u-lg-1-3">
+                                <div class="l-box">
+                                    <img alt="Mario clock phone call"
+                                        class="pure-img"
+                                        src="assets/astrocalc/astrocalc-moon-illumination.png">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </div>
@@ -294,12 +374,66 @@
                     </header>
 
                     <div class="post-description">
+                        <h1 id="buffgym">BuffGym</h1>
                         <p>
-                            This gym training assistant trains you on the famous <a href="https://stronglifts.com/5x5/" alt="Stronglifts 5x5" target="_BLANK">Stronglifts 5x5</a> workout program
+                            This gym training assistant trains you on the famous <a href="https://stronglifts.com/5x5">Stronglifts 5x5 workout</a> program.
+                        </p>
+
+                        <h2>Configuration</h2>
+                        <h3>Setting your start weight values</h3>
+                        <p>
+                            You will want to set your own starting weight values for your 5x5 training program. To do this is easy! After installing this app, go to the BangleJS app store, connect to your watch, and navigate to the <code>My Apps</code> tab. In there you will find this app in the list, and an icon (a down arrow) to the right of the app title. Click that icon to reveal a configuration page. Enter your weights and other details, and click upload. That is it, you are now ready to train!
+                        </p>
+
+                        <h2>Usage</h2>
+                        <h3>Start screen</h3>
+                        <p>
+                            When you start the app it will wait on a splash screen until you are ready to start the work out. Press any of the buttons to start.
+                        </p>
+                        <p><img src="buffgym-scrn1.png" alt=""></p>
+
+                        <h3>Workouts menu</h3>
+                        <p>
+                            You are then presented with the workouts menu, use BTN1 to move up the list, and BTN3 to move down the list. Once you have made your selection, press BTN2 to select the workout.
+                        </p>
+                        <p><img src="buffgym-scrn2.png" alt=""></p>
+                        <h3>Recording your training</h3>
+                        <p>
+                            You will now begin moving through the exercises in the workout. You will see the exercise information on the display.
+                        </p>
+                        <p><img src="buffgym-scrn3.png" alt=""></p>
+                        <ol>
+                            <li>At the top is the exercise name, e.g &#39;Squats&#39;</li>
+                            <li>Next is the weight you must train</li>
+                            <li>In the center is where you record the number of <em>reps</em> you completed (more on that shortly)</li>
+                            <li>Below the <em>reps</em> value, is the target reps you must try to reach.</li>
+                            <li>Below the target reps is the current set you are training, out of the total sets for the exercise.</li>
+                            <li>The <em>reps</em> value is used to store what you achieved for the current set, you enter this after you have trained on your current set. To alter this value, use BTN1 to increase the value (it will stop at the maximum required reps) and BTN3 to decreas the value to a minimum of 0 (this is the default value). Pressing BTN2 will confirm your reps</li>
+                        </ol>
+
+                        <h3>Rest timers</h3>
+                        <p>
+                            You will then be presented with a rest timer screen, it counts down and automatically moves to the next exercise when it reaches 0. You can cancel the timer early if you wish by pressing BTN2. If it is the last set of an exercise, you don&#39;t need to rest, so it lets you know you have completed all the sets in the exercise and can start the next exercise.
                         </p>
                         <p>
-                            <i>To be completed...</i>
+                            <img src="buffgym-scrn4.png" alt="">
+                            <img src="buffgym-scrn5.png" alt="">
                         </p>
+
+                        <h3>Workout completed</h3>
+                        <p>
+                            Once all exercises are done, you are presented with a pat-on-the-back screen to tell you how awesome you are.
+                        </p>
+                        <p>
+                            <img src="buffgym-scrn6.png" alt="">
+                        </p>
+                        <h2>Features</h2>
+                        <ul>
+                            <li>If you successfully complete all reps and sets for an exercise, it will automatically update your weights for next time</li>
+                            <li>Has a neat rest timer to make sure you are training optimally</li>
+                            <li>Doesn&#39;t require a mobile phone, most &#39;smart watches&#39; are just a visual presentation of the mobile phone app, this runs purley on the watch. So why not leave your phone and its distractions out of the gym!</li>
+                            <li>Clear and simple user interface</li>
+                        </ul>
                     </div>
                 </section>
             </div>
