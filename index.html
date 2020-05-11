@@ -463,7 +463,7 @@
                             <li>In the center is where you record the number of <em>reps</em> you completed (more on that shortly)</li>
                             <li>Below the <em>reps</em> value, is the target reps you must try to reach.</li>
                             <li>Below the target reps is the current set you are training, out of the total sets for the exercise.</li>
-                            <li>The <em>reps</em> value is used to store what you achieved for the current set, you enter this after you have trained on your current set. To alter this value, use BTN1 to increase the value (it will stop at the maximum required reps) and BTN3 to decreas the value to a minimum of 0 (this is the default value). Pressing BTN2 will confirm your reps</li>
+                            <li>The <em>reps</em> value is used to store what you achieved for the current set, you enter this after you have trained on your current set. To alter this value, use BTN1 to increase the value (it will stop at the maximum required reps) and BTN3 to decrease the value to a minimum of 0 (this is the default value). Pressing BTN2 will confirm your reps</li>
                         </ol>
 
                         <h3>Rest timers</h3>
@@ -507,7 +507,7 @@
                         <ul>
                             <li>If you successfully complete all reps and sets for an exercise, it will automatically update your weights for next time</li>
                             <li>Has a neat rest timer to make sure you are training optimally</li>
-                            <li>Doesn&#39;t require a mobile phone, most &#39;smart watches&#39; are just a visual presentation of the mobile phone app, this runs purley on the watch. So why not leave your phone and its distractions out of the gym!</li>
+                            <li>Doesn&#39;t require a mobile phone, most &#39;smart watches&#39; are just a visual presentation of the mobile phone app, this runs purely on the watch. So why not leave your phone and its distractions out of the gym!</li>
                             <li>Clear and simple user interface</li>
                         </ul>
                     </div>
@@ -569,16 +569,16 @@
                         <h3>Project summary</h3>
                         <p>
                             This was more of a spike to see what I can do with the electronics components I had lying around in various boxes.
-                            I wanted to see if I could setup some sort of simple wireless environmental sensor network and have the data consumed and published up to Google IOT services for storage and presentation.
+                            I wanted to see if I could set up some sort of simple wireless environmental sensor network and have the data consumed and published up to Google IOT services for storage and presentation.
                         </p>
                         <p>
                             I searched the internet for tutorials doing this sort of thing, and after combining them together I ended up with this functioning project.
                         </p>
                         <h3>Hardware</h3>
                         <p>
-                            I found the impressive esp8266 wireless module and a few Arduino Nanos, some HC12 transievers and a couple DHT11/22 sensors. This appeared to be all I needed to get the project started.
+                            I found the impressive esp8266 wireless module and a few Arduino Nanos, some HC12 transceivers and a couple DHT11/22 sensors. This appeared to be all I needed to get the project started.
                             So to begin with I needed a 'hub' to which all the remote wireless sensors would transmit the sensor data to, and in turn was connected to the internet.
-                            This was ideal for the esp8266 module, to which I connected a HC12 transiever.
+                            This was ideal for the esp8266 module, to which I connected a HC12 transceiver.
                         </p>
                         <h3>Cloud setup</h3>
                         <p>
@@ -594,8 +594,8 @@
                         </p>
                         <h3>Construction</h3>
                         <p>
-                            Now that the esp8266 was on the network and authenticated and communicating with Google IOT services it was time to make the remote sensors. These were simple to setup, just connect an Arduino Nano to a DHT11 sensor (which collects temperature and humidity) and the HC12 wireless module.
-                            It is important that all the HC12 modules are opperating on the same channel, baud rate etc. I chose configuration 'FU4' which is for long range comms, these settings are configured using AT commands through a serial connection.
+                            Now that the esp8266 was on the network and authenticated and communicating with Google IOT services it was time to make the remote sensors. These were simple to set up, just connect an Arduino Nano to a DHT11 sensor (which collects temperature and humidity) and the HC12 wireless module.
+                            It is important that all the HC12 modules are operating on the same channel, baud rate etc. I chose configuration 'FU4' which is for long range comms, these settings are configured using AT commands through a serial connection.
                         </p>
                         <p>
                             With the sensors transmitting data, and the hub device collecting and publishing them to the message queue on Google, it was time to process, store and render the data!
@@ -624,7 +624,7 @@
                         </div>
                         <h3>Cloud processing, storage and presentation</h3>
                         <p>
-                            I used Googles Firebase for this step. In here I created a serverless-function to process the messages that come in on the message queue, and persist them to the real-time database I setup.
+                            I used Googles Firebase for this step. In here I created a serverless-function to process the messages that come in on the message queue, and persist them to the real-time database I set up.
                             With the messages persisted, I then put together a simple webpage (hosted in Firebase) to render a section of the latest data in graphs.
                         </p>
                         <div class="post-images pure-g">
@@ -639,7 +639,7 @@
                         </div>
                         <h3>Conclusion</h3>
                         <p>
-                            This was a nice little project, that had its learning curves i'll be honest, especially when it comes to the HC12's.. they can be very fussy in their physical setup to get working, such as aerials types, aerial position and orientation, distance etc.
+                            This was a nice little project, that had its learning curves I'll be honest, especially when it comes to the HC12's.. they can be very fussy in their physical setup to get working, such as aerials types, aerial position and orientation, distance etc.
                             There are plenty of tutorials on doing projects just like this, I usually head over to <a href="https://www.instructables.com/" alt="Instructables" target="_BLANK">Instructables</a> which has many great projects for you to follow.
                         </p>
                     </div>
@@ -662,7 +662,7 @@
                         </p>
                         <p>
                             After doing a lot of coding after the first four weeks of lockdown, I needed to take a break and decompress. I was working more hours than I would at work, and also working seven days a week.. It was hard to stop I was enjoying it all so much.
-                            But still I decided to relax with some drawing, in particular some Sacred Geometry. It is very theraputic, as all you need is a compass, ruler, and a pen. No artistic skills need for this!
+                            But still I decided to relax with some drawing, in particular some Sacred Geometry. It is very therapeutic, as all you need is a compass, ruler, and a pen. No artistic skills need for this!
                         </p>
                         <p>
                             What makes this way of drawing special is that the pictures are mathematically perfect, everything is a ratio of something else you draw before-hand. You can only create distances by existing line intersections. You have to watch a video of one being drawn to understand what I mean.
@@ -755,7 +755,7 @@
                             </div>
                         </div>
                         <p>
-                            I love the idea of these engines, and think they deserve much more investigation as a potential way of converting the energy the sun hurls at us in to mechanical energy.
+                            I love the idea of these engines, and think they deserve much more investigation as a potential way of converting the energy the sun hurls at us into mechanical energy.
                             What I dislike about them is they are very bulky with wheels and rods etc, which I guess doesn't make them very practical in real life. So I went on to design a more compact implementation, more like an electric motor configuration.
                             I used <a href="https://www.tinkercad.com/" alt="Tinkercad" target="_BLANK">Tinkercad</a> which is an online 3D drawing program, which exports the designs for 3D printing.
                         </p>
@@ -809,7 +809,7 @@
 
                     <div class="post-description">
                         <p>
-                            I hope you have enjoyed these projects. It is quite a lot for 8 weeks, but it has kept me on the straight and narrow, and thourougly entertained.
+                            I hope you have enjoyed these projects. It is quite a lot for 8 weeks, but it has kept me on the straight and narrow, and thoroughly entertained.
                         </p>
                         <p>
                             I am now looking forward to the day when we go back to work, so that I can have a rest from all this!
