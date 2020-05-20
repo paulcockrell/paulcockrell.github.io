@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+.pure-menu .pure-menu-list .pure-menu-link {
+    color: #fff;
+}
+
 /*
  * -- BASE STYLES --
  * Most of these are inherited from Base, but I want to change a few.
