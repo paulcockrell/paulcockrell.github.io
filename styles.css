@@ -200,6 +200,9 @@ aside a {
         text-align: center;
     }
 }
+.is-center{
+    text-align:center;
+}
 
 /* Images converted here https://www.ofoct.com/html5-app/image-to-css3.html */
 .brand-logo {
