@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A developers project diary.">
+    <title>Project diary</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.1/build/pure-min.css"
+        integrity="sha384-QkSsJi6SGgWv5LAx1TdvIDRf8TW5Ui4NVKqDDlK1wY2eKioo7wvYIJvGWFQSFE4U" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.1/build/grids-responsive-min.css"
+        crossorigin="anonymous" />
+    <script src="https://kit.fontawesome.com/9ab75a948a.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+    <div id="layout" class="pure-g">
+        <div class="sidebar pure-u-1 pure-u-md-1-4">
+            <div class="header">
+                <img src="assets/me.png" alt="Me" />
+                <h1 class="brand-title">Lockdown project diary</h1>
+                <h2 class="brand-tagline">For prosperity and inspiration</h2>
+                <div class="social">
+                    <a href="https://www.linkedin.com/in/paul-g-35aa698/" aria-label="Linkedin" target="_blank">
+                        <i class="fab fa-linkedin fa-lg"></i>
+                    </a>
+                    <a href="https://github.com/paulcockrell" aria-label="Github" target="_blank">
+                        <i class="fab fa-github fa-lg"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="content pure-u-1 pure-u-md-3-4">
+            <div>
+                <div class="posts">
+                    <h1 class="content-subhead">Part Three (the finale)- Introduction</h1>
+
+                    <!-- A single blog post -->
+                    <section class="post">
+                        <header class="post-header">
+                            <h2 class="post-title">Part Three - And so it concludes</h2>
+                        </header>
+
+                        <div class="post-description">
+                            <p>
+                                5 and a half months in (or there abouts) and I have gotten myself a new job, which I
+                                start this Wednesday (9 Sept 2020). So I am finally able to see the back of the furlough
+                                and the isolation that it brings.
+                            </p>
+                            <p>
+                                If you are starting here, feel free to go back and see the previous two sections filled
+                                with projects completed during the lockdown:
+                            <ol>
+                                <li>
+                                    <a href="lockdown-diary-part1.html" alt="Lockdown projects part 1">first 8 weeks</a>
+                                </li>
+                                <li>
+                                    <a href="lockdown-diary-part2.html" alt="Lockdown projects part 2">second 8
+                                        weeks</a>
+                                </li>
+                            </ol>
+                            </p>
+                            <p>
+                            </p>
+                            <p>
+                                Thanks to everyone that has taken an interest in my projects. I do hope at least some of
+                                you found them useful in some way.
+                            </p>
+                            <p>
+                                <i>Enjoy, and sayonara.</i>
+                            </p>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- A wrapper for all the Golang blog posts -->
+                <div class="posts">
+                    <h1 class="content-subhead">Hackday style projects</h1>
+
+                    <!-- A single blog post -->
+                    <section class="post">
+                        <header class="post-header">
+                            <h2 class="post-title">Precious metal price tracker</h2>
+                        </header>
+
+                        <div class="post-description">
+                            <p>
+                                As the economies of the world look to be in trouble investing in Gold and Silver as a
+                                hedge might be a good call. So I built a little
+                                desktop RaspberryPI precious metal price tracker.
+                            </p>
+                            <p>
+                                The <a
+                                    href="https://shop.pimoroni.com/products/raspberry-pi-zero-wh-with-pre-soldered-header"
+                                    alt="pimoroni shop" target="_BLANK">Raspberry Pi Zero W</a> is coupled with an <a
+                                    href="https://shop.pimoroni.com/products/inky-phat?variant=12549254217811"
+                                    alt="pimoroni shop" target="_BLANK">InkyPhat</a> three
+                                color E-Paper display, and runs a small configurable Go program on a cron to update the
+                                display periodically with the selected metal and currency.
+                            </p>
+                            <p>
+                                The project is free to use and is available on my <a
+                                    href="https://github.com/paulcockrell/hemepi" alt="HeMePI Github project"
+                                    target="_BLANK">Github</a> with necessary instructions
+                            </p>
+                            <div class="post-images pure-g">
+                                <div class="pure-u-1-1 pure-u-sm-1-2 pure-u-lg-1-3">
+                                    <div class="l-box">
+                                        <img alt="Heavy Metal Price Tracker" class="pure-img lazy"
+                                            src="assets/placeholder.png" data-src="assets/hemepi/hemepi.jpeg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+
+                <!-- A wrapper for all the book blog posts -->
+                <div class="posts">
+                    <h1 class="content-subhead">Golang for Web Games???</h1>
+
+                    <!-- A single blog post -->
+                    <section class="post">
+                        <header class="post-header">
+                            <h2 class="post-title">Golang Games</h2>
+                        </header>
+
+                        <div class="post-description">
+                            <p>
+                                Did you know that Golang compiles to <a href="https://webassembly.org/"
+                                    alt="webassembly" target="_BLANK">WebAssembly</a>? I didn't, but when I found out I
+                                had to make a game with Go that ran in the browser!
+                            </p>
+                            <p>
+                                This is quite a big thing, I for all the months I've been doing Go it simply passed me
+                                by, but this is BIG! So hopefully this (dreadful) game I have made will put you on the
+                                path to the future of web development.
+                            </p>
+                            <p>
+                                In classic British humour, if you can't laugh at a bad situation then you have already
+                                lost. So I have made an RPG game where you get to fight the Corona virus and save the
+                                NHS.
+                            </p>
+                            <p>
+                                It is written in Go, using the <a href="https://ebiten.org/"
+                                    alt="Ebiten 2D game library" target="_BLANK">Ebiten</a> 2D game library. The game
+                                code can be found at my <a href="https://github.com/paulcockrell/gametest" alt="Github"
+                                    target="_BLANK">Github</a>
+                                although it really is a hack project so you may be better off learning from the Ebiten
+                                examples :-)
+                            </p>
+                            <p>
+                                You can play the game right here, right now! It has sound too!
+                            </p>
+
+                            <div class="is-center">
+                                <div class="contet">
+                                    <h2 class="content-head is-center">VaxerMan - The Corona Virus slayer</h2>
+                                    <h3 class="content-subhead">
+                                        <i class="fa fa-exclamation-triangle"></i>
+                                        <i class="fa fa-bug"></i>
+                                        Protect the NHS from the Corona Virus
+                                        <i class="fa fa-bug"></i>
+                                        <i class="fa fa-exclamation-triangle"></i>
+                                    </h3>
+
+                                    <div class="pure-g">
+                                        <div class="l-box pure-u-1 pure-u-md-1-1 pure-u-lg-1-1">
+                                            <p>
+                                                <i>
+                                                    Use the <strong>arrow keys</strong> to move player, and
+                                                    <strong>Spacebar</strong> to fire. '<strong>r</strong>' resets the
+                                                    game:
+                                                </i>
+                                            </p>
+                                            <iframe src="./assets/game/game.html"
+                                                title="VaxerMan - The Corona Virus Killer" width="640" height="640"
+                                                style="border:none" scrolling="no"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- A wrapper for all the outro -->
+                <div class="posts">
+                    <h1 class="content-subhead">Definately the Outro</h1>
+
+                    <!-- A single blog post -->
+                    <section class="post">
+                        <header class="post-header">
+                            <h2 class="post-title">Absolute Final thoughts, no ifs-no buts</h2>
+                        </header>
+
+                        <div class="post-description">
+                            <p>
+                                All of the 5 months worth of projects have been very fun to make and I hope you have
+                                enjoyed them, but now I get to put it all behind me and return to normal.
+                                But I am so happy to returning to the workforce and being a productive member of society
+                                once again.
+                            </p>
+                            <p>
+                                Well, that's all folks.
+                            </p>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="footer">
+                    <div class="pure-menu pure-menu-horizontal">
+                        <ul>
+                            <li class="pure-menu-item"><a href="https://www.linkedin.com/in/paul-g-35aa698/"
+                                    class="pure-menu-link" target="_BLANK">LinkedIn</a></li>
+                            <li class="pure-menu-item"><a href="http://github.com/paulcockrell/" class="pure-menu-link"
+                                    target="_BLANK">GitHub</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

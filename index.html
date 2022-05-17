@@ -1,840 +1,130 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Lockdown of 2020 - A developers project diary.">
-    <title>Lockdown &ndash; project diary</title>
+    <meta name="description" content="A developers project diary.">
+    <title>Projects diary</title>
     <link rel="stylesheet" href="./styles.css">
-    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.1/build/pure-min.css" integrity="sha384-QkSsJi6SGgWv5LAx1TdvIDRf8TW5Ui4NVKqDDlK1wY2eKioo7wvYIJvGWFQSFE4U" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.1/build/grids-responsive-min.css" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.1/build/pure-min.css"
+        integrity="sha384-QkSsJi6SGgWv5LAx1TdvIDRf8TW5Ui4NVKqDDlK1wY2eKioo7wvYIJvGWFQSFE4U" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.1/build/grids-responsive-min.css"
+        crossorigin="anonymous" />
     <script src="https://kit.fontawesome.com/9ab75a948a.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </head>
-<body>
 
-<div id="layout" class="pure-g">
-    <div class="sidebar pure-u-1 pure-u-md-1-4">
-        <div class="header">
-            <img src="assets/me.png" alt="Me"/>
-            <h1 class="brand-title">Lockdown project diary</h1>
-            <h2 class="brand-tagline">For prosperity and inspiration</h2>
-            <div class="social">
-                <a href="https://www.linkedin.com/in/paul-g-35aa698/" aria-label="Linkedin" target="_blank">
-                    <i class="fab fa-linkedin fa-lg"></i>
-                </a>
-                <a href="https://github.com/paulcockrell" aria-label="Github" target="_blank">
-                    <i class="fab fa-github fa-lg"></i>
-                </a>
+<body>
+    <div id="layout" class="pure-g">
+        <div class="sidebar pure-u-1 pure-u-md-1-4">
+            <div class="header">
+                <img src="assets/me.png" alt="Me" />
+                <h1 class="brand-title">Projects diary</h1>
+                <h2 class="brand-tagline">For prosperity and inspiration</h2>
+                <div class="social">
+                    <a href="https://www.linkedin.com/in/paul-g-35aa698/" aria-label="Linkedin" target="_blank">
+                        <i class="fab fa-linkedin fa-lg"></i>
+                    </a>
+                    <a href="https://github.com/paulcockrell" aria-label="Github" target="_blank">
+                        <i class="fab fa-github fa-lg"></i>
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="content pure-u-1 pure-u-md-3-4">
-        <div>
+        <div class="content pure-u-1 pure-u-md-3-4">
             <div class="posts">
-                <h1 class="content-subhead">Introduction</h1>
+                <h1>Projects diary</h1>
+
+                <section class="post">
+                    <header class="post-header">
+                        <h3 class="post-title">Introduction</h3>
+                    </header>
+
+                    <div class="post-description">
+                        <p>
+                            This is a simple site for collecting together some of the things I create outside of work.
+                            It's not all coding, we have languages and arty projects too. Something to take a break from
+                            the day-job!
+                        </p>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Art projects links -->
+            <div class="posts">
+                <h1 class="content-subhead">🎨 Art projects - 2022</h1>
 
                 <!-- A single blog post -->
                 <section class="post">
-                    <header class="post-header">
-                        <h2 class="post-title">What is the lockdown project diary?</h2>
-                    </header>
-
+                    <p class="post-meta">
+                        <i class="post-category post-category-spring-2" href="#">Cartoons</i>
+                        <i class="post-category post-category-spring-3" href="#">Art</i>
+                    </p>
                     <div class="post-description">
                         <p>
-                            It's the Spring of 2020, and the world has been put on lockdown, and neither Ironman nor Wonder woman turned up to save us all, which I think makes all those Marvel and DC documentaries misleading.
+                            At the start 2022 I was itching to get back in to drawing. I had written and illustrated a
+                            book as part of my lockdown projects. But this time I wanted to learn from the masters. So I
+                            spent 5 months copying a selection of cartoons of varying styles. It is quite incredible the
+                            talent they have, and was a pleasure emulating their drawings.
                         </p>
                         <p>
-                            Well.. what am I to do now I'm furloughed for an unknown period of time??
+                            I would hand draw my own impression of their work, and then scan this rough draft and use it
+                            as a base for the final digital piece. I used a great free bit of software (please choose to
+                            support them financially if you use it!) called <a href="https://krita.org"
+                                alt="Krita software website">Krita</a>. It's amazing that this sort of quality software
+                            can be free.
                         </p>
-                        <p>
-                            I decided to put the time to good use, and get stuck in with some light-hearted coding and
-                            electronics projects.
-                        </p>
-                        <p>
-                            Hopefully some of them make you smile, and others may inspire you to flex your creative
-                            muscles and build your own amazing projects!
-                        </p>
-                    </div>
-                </section>
-            </div>
-
-            <!-- A wrapper for all the BangleJS blog posts -->
-            <div class="posts">
-                <h1 class="content-subhead">BangleJS</h1>
-
-                <!-- A single blog post -->
-                <section class="post">
-                    <header class="post-header">
-                        <h2 class="post-title">Introducing BangleJS</h2>
-                    </header>
-
-                    <div class="post-description">
-                        <p>
-                            You may or may not have heard about the brilliant opensource smart watch from
-                            <a href="http://www.espruino.com/" alt="Espruino website" target="_BLANK">Espruino</a> called the
-                            <a href="https://www.espruino.com/Bangle.js" alt="Bangle.js" target="_BLANK">Bangle.js</a>. I was
-                            a backer of the <a href="https://www.kickstarter.com/projects/gfw/banglejs-the-hackable-smart-watch">kickstarter campaign</a>
-                            and received mine just as the lock down kicked in <i class="nes-icon trophy"></i>.
-                        </p>
-                        <div class="post-images pure-g">
-                            <div class="pure-u-1-1">
-                                <div class="l-box">
-                                    <img alt="BangleJS watch"
-                                        class="pure-img lazy"
-                                        src="assets/placeholder.png"
-                                        data-src="assets/bangle-watch.jpg">
-                                </div>
-                            </div>
-                        </div>
-                        <p>
-                            It's a fantastic watch that is exreemely easy to develop apps for. You write your apps in Javascript, directly in the browser, and load into the watch
-                            wirelessly over bluetooth.
-                        </p>
-                        <p>
-                            That's right, it is SUPER EASY!.
-                        </p>
-                        <p>
-                            If you would like to purchase one, head on over to the <a href="https://shop.espruino.com/banglejs" target="_BLANK">Espruino shop</a> <i class="nes-icon coin"></i>
-                        </p>
-                        <aside>
-                            <p>
-                                If you like any of the apps I have created, or wish to look into all the other amazing things people have created for the
-                                BangleJS, head over to the <a href="https://banglejs.com/apps" alt="BangleJS app store" target="_BLANK">app store</a>!
-                            </p>
-                        </aside>
-                    </div>
-                </section>
-            </div>
-
-            <div class="posts">
-                <section class="post">
-                    <header class="post-header">
-                        <h3 class="post-title">Project #1 - Mario Clock</h2>
-
-                        <p class="post-meta">
-                            By <a class="post-author" href="#">Paul C</a> under <a class="post-category post-category-js" href="#">JavaScript</a><a class="post-category post-category-banglejs" href="#">BangleJS</a>
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>
-                            The first project I created was a Gameboy inspired Mario watchface. As this is a watch, it seemed like the best place to begin, and I always wanted to design
-                            and create my own digital clock. This was inspired by an old 
-                            <a href="https://github.com/paulcockrell/espruino-mario-clock" target="_BLANK" rel="noopener" alt="Espruino Mario Project">microcontroller
-                            project</a> I did a few years back, which itself was inspired by a Mario watchface I had on my Pebble watch.
-                        </p>
-                        <p>
-                            In a nutshell it is an animated watchface, where Mario is running through a level with random scenery, and when the time increments every minute, he jumps and hits the blocks that show the time.
-                        </p>
-                        <div class="post-images pure-g">
-                            <div class="pure-u-1-1 pure-u-sm-1-2 pure-u-lg-1-3">
-                                <div class="l-box">
-                                    <img alt="Mario clock animation"
-                                        class="pure-img lazy"
-                                        src="assets/placeholder.png"
-                                        data-src="assets/marioclock/mario-clock.gif">
-                                </div>
-                            </div>
-                        </div>
-                        <p>
-                            This watchface is packed full of features, and I think the end result is quite splendid!
-                        </p>
-                        <h2>Day/night mode</h2>
-                        <p>
-                            We are all aware of the strain we put our eyes under with bright screens at night, so a dark mode was a must. It has three levels of darkness which
-                            are cycled through by swiping left.
-                        </p>
-                        <div class="post-images pure-g">
-                            <div class="pure-u-1-1 pure-u-sm-1-2 pure-u-lg-1-3">
-                                <div class="l-box">
-                                    <img alt="Mario clock day mode"
-                                        class="pure-img lazy"
-                                        src="assets/placeholder.png"
-                                        data-src="assets/marioclock/marioclock-lightmode.png">
-                                </div>
-                            </div>
-                            <div class="pure-u-1-1 pure-u-sm-1-2 pure-u-lg-1-3">
-                                <div class="l-box">
-                                    <img alt="Mario clock night mode"
-                                        class="pure-img lazy"
-                                        src="assets/placeholder.png"
-                                        data-src="assets/marioclock/marioclock-darkmode.png">
-                                </div>
-                            </div>
-                        </div>
-                        <h2>Multiple characters</h2>
-                        <p>
-                            Mario is great, but we also love Toad and Daisy, so we have them all! To cycle through the characters you swipe the screen right. What ever is you choose is saved, so if you navigate to another app and return to this default watchface, your character will be selected automatically.
-                        </p>
-                        <div class="post-images pure-g">
-                            <div class="pure-u-1-1 pure-u-sm-1-2 pure-u-lg-1-3">
-                                <div class="l-box">
-                                    <img alt="Mario clock Mario character"
-                                        class="pure-img lazy"
-                                        src="assets/placeholder.png"
-                                        data-src="assets/marioclock/mario-clock-mario.png">
-                                </div>
-                            </div>
-                            <div class="pure-u-1-1 pure-u-sm-1-2 pure-u-lg-1-3">
-                                <div class="l-box">
-                                    <img alt="Mario clock Toad character"
-                                        class="pure-img lazy"
-                                        src="assets/placeholder.png"
-                                        data-src="assets/marioclock/mario-clock-toad.png">
-                                </div>
-                            </div>
-                            <div class="pure-u-1-1 pure-u-sm-1-2 pure-u-lg-1-3">
-                                <div class="l-box">
-                                    <img alt="Mario clock Daisy character"
-                                        class="pure-img lazy"
-                                        src="assets/placeholder.png"
-                                        data-src="assets/marioclock/mario-clock-daisy.png">
-                                </div>
-                            </div>
-                        </div>
-                        <h2>Information panel</h2>
-                        <p>
-                            The screen is configured to use its lowest resolution - 80x80. This does not leave us with much space to display different information. So I implemented an information panel at the top of the watchface. This panel can show multiple peices of information by pressing button-1 on the watch, which cycles through the following:
-                            <ul>
-                                <li>Date</li>
-                                <li>Battery level</li>
-                                <li>Temperature</li>
-                                <li>Phone connectivity (more on this later!)</li>
-                            </ul>
-                        </p>
-                        <div class="post-images pure-g">
-                            <div class="pure-u-1-1 pure-u-sm-1-2 pure-u-lg-1-3">
-                                <div class="l-box">
-                                    <img alt="Mario clock date"
-                                        class="pure-img lazy"
-                                        src="assets/placeholder.png"
-                                        data-src="assets/marioclock/mario-clock-mario.png">
-                                </div>
-                            </div>
-                            <div class="pure-u-1-1 pure-u-sm-1-2 pure-u-lg-1-3">
-                                <div class="l-box">
-                                    <img alt="Mario clock battery level"
-                                        class="pure-img lazy"
-                                        src="assets/placeholder.png"
-                                        data-src="assets/marioclock/mario-clock-battery.png">
-                                </div>
-                            </div>
-                            <div class="pure-u-1-1 pure-u-sm-1-2 pure-u-lg-1-3">
-                                <div class="l-box">
-                                    <img alt="Mario clock temperature"
-                                        class="pure-img lazy"
-                                        src="assets/placeholder.png"
-                                        data-src="assets/marioclock/mario-clock-temperature.png">
-                                </div>
-                            </div>
-                            <div class="pure-u-1-1 pure-u-sm-1-2 pure-u-lg-1-3">
-                                <div class="l-box">
-                                    <img alt="Mario clock Daisy character"
-                                        class="pure-img lazy"
-                                        src="assets/placeholder.png"
-                                        data-src="assets/marioclock/mario-clock-phone.png">
-                                </div>
-                            </div>
-                        </div>
-                        <h2>Mobile phone connectivity</h2>
-                        <p>
-                            This works with Android only, through a mobile app called <a href="https://gadgetbridge.org/" alt="Gadget Bridge" target="_BLANK">Gadget Bridge</a>.
-                            It allows messages to be passed between the mobile phone and the watch over bluetooth.
-                        </p>
-                        <p>
-                            This watch face will let you know when you get a text or a phone call, it scrolls the caller/sender and message/phone
-                            number on the information panel, while the character has a speech bubble with an icon showing the communication type, and the watch will buzz for a few seconds.
-                        </p>
-                        <div class="post-images pure-g">
-                            <div class="pure-u-1-1 pure-u-sm-1-2 pure-u-lg-1-3">
-                                <div class="l-box">
-                                    <img alt="Mario clock text message"
-                                        class="pure-img lazy"
-                                        src="assets/placeholder.png"
-                                        data-src="assets/marioclock/mario-clock-text-message.png">
-                                </div>
-                            </div>
-                            <div class="pure-u-1-1 pure-u-sm-1-2 pure-u-lg-1-3">
-                                <div class="l-box">
-                                    <img alt="Mario clock phone call"
-                                        class="pure-img lazy"
-                                        src="assets/placeholder.png"
-                                        data-src="assets/marioclock/mario-clock-phone-call.png">
-                                </div>
-                            </div>
-                        </div>
-                        <h2>Low battery</h2>
-                        <p>
-                            If the watch battery drops bellow 10% the watch will show a message on the information pannel and the character shows a battery icon in a speech bubble. The watch will vibrate to make sure you get the message. It will repeat every ten minutes until it dies or you plug in the charger.
-                        </p>
-                        <div class="post-images pure-g">
-                            <div class="pure-u-1-1 pure-u-sm-1-2 pure-u-lg-1-3">
-                                <div class="l-box">
-                                    <img alt="Mario clock low battery"
-                                        class="pure-img lazy"
-                                        src="assets/placeholder.png"
-                                        data-src="assets/marioclock/mario-clock-low-battery.png">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-
-            <div class="posts">
-                <section class="post">
-                    <header class="post-header">
-                        <h3 class="post-title">Project #2 - Astrocalc</h2>
-
-                        <p class="post-meta">
-                            By <a class="post-author" href="#">Paul C</a> under <a class="post-category post-category-js" href="#">JavaScript</a><a class="post-category post-category-banglejs" href="#">BangleJS</a>
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>
-                            View information about the Sun and Moon, such as position in the sky, rise & set times and much more based
-                            on your GPS position and date.
-                        </p>
-                        <p>
-                            This little app is good fun if you like to know the times and technical terms and phases the Sun and Moon go through, for the present day. Such as the current moon phase, the position of the Sun and moon in respect to the earth and so on.
-                            The maths that drives this came from the <a href="https://github.com/mourner/suncalc" alt="Suncalc library" target="_BLANK">Suncalc</a> library that was slightly modified to run on the BangleJS (and some issues corrected). I am in no way clever enough for this sort of maths, what I really did was add a nice watch-friendly
-                            display over the top of it.
-                        </p>
-                        <p>
-                            When it boots it reads your GPS position (or you can skip this if you have a previous GPS lock), and then presents a menu for you
-                            to navigate through to learn about the Sun and Moons details for today.
-                        </p>
-                        <h2>Splash screen</h2>
-                        <p>
-                            Waits for the watch to get a GPS lock, or if you have previously had a GPS lock it will offer you the option to use that.
-                        </p>
-                        <div class="post-images pure-g">
-                            <div class="pure-u-1-1 pure-u-sm-1-2 pure-u-lg-1-3">
-                                <div class="l-box">
-                                    <img alt="Astrocalc splash screen"
-                                        class="pure-img lazy"
-                                        src="assets/placeholder.png"
-                                        data-src="assets/astrocalc/astrocalc-splash-screen.png">
-                                </div>
-                            </div>
-                        </div>
-                        <h2>Main menu</h2>
-                        <p>
-                            Gives you the options to view information on either the Sun or the Moon.
-                        </p>
-                        <div class="post-images pure-g">
-                            <div class="pure-u-1-1 pure-u-sm-1-2 pure-u-lg-1-3">
-                                <div class="l-box">
-                                    <img alt="Astrocalc main manu"
-                                        class="pure-img lazy"
-                                        src="assets/placeholder.png"
-                                        data-src="assets/astrocalc/astrocalc-main-menu.png">
-                                </div>
-                            </div>
-                        </div>
-                        <h2>Sun</h2>
-                        <p>
-                            You are presented with a menu for all the details you can learn about for the Sun, for your location and today. On selecting an option you get a graphic showing the Suns position around the earth, where the top of the circle is noon.
-                        </p>
-                        <div class="post-images pure-g">
-                            <div class="pure-u-1-1 pure-u-sm-1-2 pure-u-lg-1-3">
-                                <div class="l-box">
-                                    <img alt="Astrocalc sun menu"
-                                        class="pure-img lazy"
-                                        src="assets/placeholder.png"
-                                        data-src="assets/astrocalc/astrocalc-sun-menu.png">
-                                </div>
-                            </div>
-                            <div class="pure-u-1-1 pure-u-sm-1-2 pure-u-lg-1-3">
-                                <div class="l-box">
-                                    <img alt="Astrocalc sun position"
-                                        class="pure-img lazy"
-                                        src="assets/placeholder.png"
-                                        data-src="assets/astrocalc/astrocalc-sun-position.png">
-                                </div>
-                            </div>
-                        </div>
-                        <h2>Moon</h2>
-                        <p>
-                            You are presented with a menu for all the details you can learn about for the Moon, for your location and today. On selecting an option you get a graphic showing the Moon position around the earth, where the top of the circle is noon. And also the current phase the Moon is in.
-                        </p>
-                        <div class="post-images pure-g">
-                            <div class="pure-u-1-1 pure-u-sm-1-2 pure-u-lg-1-3">
-                                <div class="l-box">
-                                    <img alt="Astrocalc moon menu"
-                                        class="pure-img lazy"
-                                        src="assets/placeholder.png"
-                                        data-src="assets/astrocalc/astrocalc-moon-menu.png">
-                                </div>
-                            </div>
-                            <div class="pure-u-1-1 pure-u-sm-1-2 pure-u-lg-1-3">
-                                <div class="l-box">
-                                    <img alt="Astrocalc moon position"
-                                        class="pure-img lazy"
-                                        src="assets/placeholder.png"
-                                        data-src="assets/astrocalc/astrocalc-moon-position.png">
-                                </div>
-                            </div>
-                            <div class="pure-u-1-1 pure-u-sm-1-2 pure-u-lg-1-3">
-                                <div class="l-box">
-                                    <img alt="Astrocalc moon illumination"
-                                        class="pure-img lazy"
-                                        src="assets/placeholder.png"
-                                        data-src="assets/astrocalc/astrocalc-moon-illumination.png">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-
-            <div class="posts">
-                <section class="post">
-                    <header class="post-header">
-                        <h3 class="post-title">Project #3 - Buffgym</h2>
-
-                        <p class="post-meta">
-                            By <a class="post-author" href="#">Paul C</a> under <a class="post-category post-category-js" href="#">JavaScript</a><a class="post-category post-category-banglejs" href="#">BangleJS</a>
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <h1 id="buffgym">BuffGym</h1>
-                        <p>
-                            This gym training assistant trains you on the famous <a href="https://stronglifts.com/5x5">Stronglifts 5x5 workout</a> program.
-                        </p>
-
-                        <h2>Configuration</h2>
-                        <h3>Setting your start weight values</h3>
-                        <p>
-                            You will want to set your own starting weight values for your 5x5 training program. To do this is easy! After installing this app, go to the BangleJS app store, connect to your watch, and navigate to the <code>My Apps</code> tab. In there you will find this app in the list, and an icon (a down arrow) to the right of the app title. Click that icon to reveal a configuration page. Enter your weights and other details, and click upload. That is it, you are now ready to train!
-                        </p>
-
-                        <h2>Usage</h2>
-                        <h3>Start screen</h3>
-                        <p>
-                            When you start the app it will wait on a splash screen until you are ready to start the work out. Press any of the buttons to start.
-                        </p>
-                        <div class="post-images pure-g">
-                            <div class="pure-u-1-1 pure-u-sm-1-2 pure-u-lg-1-3">
-                                <div class="l-box">
-                                    <img alt="Buffgym splash screen"
-                                        class="pure-img lazy"
-                                        src="assets/placeholder.png"
-                                        data-src="assets/buffgym/buffgym-splash-screen.png">
-                                </div>
-                            </div>
-                        </div>
-
-                        <h3>Workouts menu</h3>
-                        <p>
-                            You are then presented with the workouts menu, use BTN1 to move up the list, and BTN3 to move down the list. Once you have made your selection, press BTN2 to select the workout.
-                        </p>
-                        <div class="post-images pure-g">
-                            <div class="pure-u-1-1 pure-u-sm-1-2 pure-u-lg-1-3">
-                                <div class="l-box">
-                                    <img alt="Buffgym workouts menu"
-                                        class="pure-img lazy"
-                                        src="assets/placeholder.png"
-                                        data-src="assets/buffgym/buffgym-scrn2.png">
-                                </div>
-                            </div>
-                        </div>
-                        <h3>Recording your training</h3>
-                        <p>
-                            You will now begin moving through the exercises in the workout. You will see the exercise information on the display.
-                        </p>
-                        <div class="post-images pure-g">
-                            <div class="pure-u-1-1 pure-u-sm-1-2 pure-u-lg-1-3">
-                                <div class="l-box">
-                                    <img alt="Buffgym recording training"
-                                        class="pure-img lazy"
-                                        src="assets/placeholder.png"
-                                        data-src="assets/buffgym/buffgym-scrn3.png">
-                                </div>
-                            </div>
-                        </div>
-                        <ol>
-                            <li>At the top is the exercise name, e.g &#39;Squats&#39;</li>
-                            <li>Next is the weight you must train</li>
-                            <li>In the center is where you record the number of <em>reps</em> you completed (more on that shortly)</li>
-                            <li>Below the <em>reps</em> value, is the target reps you must try to reach.</li>
-                            <li>Below the target reps is the current set you are training, out of the total sets for the exercise.</li>
-                            <li>The <em>reps</em> value is used to store what you achieved for the current set, you enter this after you have trained on your current set. To alter this value, use BTN1 to increase the value (it will stop at the maximum required reps) and BTN3 to decrease the value to a minimum of 0 (this is the default value). Pressing BTN2 will confirm your reps</li>
-                        </ol>
-
-                        <h3>Rest timers</h3>
-                        <p>
-                            You will then be presented with a rest timer screen, it counts down and automatically moves to the next exercise when it reaches 0. You can cancel the timer early if you wish by pressing BTN2. If it is the last set of an exercise, you don&#39;t need to rest, so it lets you know you have completed all the sets in the exercise and can start the next exercise.
-                        </p>
-                        <div class="post-images pure-g">
-                            <div class="pure-u-1-1 pure-u-sm-1-2 pure-u-lg-1-3">
-                                <div class="l-box">
-                                    <img alt="Buffgym rest timer"
-                                        class="pure-img lazy"
-                                        src="assets/placeholder.png"
-                                        data-src="assets/buffgym/buffgym-scrn4.png">
-                                </div>
-                            </div>
-                            <div class="pure-u-1-1 pure-u-sm-1-2 pure-u-lg-1-3">
-                                <div class="l-box">
-                                    <img alt="Buffgym exersice complete"
-                                        class="pure-img lazy"
-                                        src="assets/placeholder.png"
-                                        data-src="assets/buffgym/buffgym-scrn5.png">
-                                </div>
-                            </div>
-                        </div>
-
-                        <h3>Workout completed</h3>
-                        <p>
-                            Once all exercises are done, you are presented with a pat-on-the-back screen to tell you how awesome you are.
-                        </p>
-                        <div class="post-images pure-g">
-                            <div class="pure-u-1-1 pure-u-sm-1-2 pure-u-lg-1-3">
-                                <div class="l-box">
-                                    <img alt="Buffgym workout complete"
-                                        class="pure-img lazy"
-                                        src="assets/placeholder.png"
-                                        data-src="assets/buffgym/buffgym-scrn6.png">
-                                </div>
-                            </div>
-                        </div>
-                        <h2>Features</h2>
-                        <ul>
-                            <li>If you successfully complete all reps and sets for an exercise, it will automatically update your weights for next time</li>
-                            <li>Has a neat rest timer to make sure you are training optimally</li>
-                            <li>Doesn&#39;t require a mobile phone, most &#39;smart watches&#39; are just a visual presentation of the mobile phone app, this runs purely on the watch. So why not leave your phone and its distractions out of the gym!</li>
-                            <li>Clear and simple user interface</li>
+                        <ul class="links">
+                            <li>
+                                <a href="art-2022.html" alt="Art projects">Art projects</a>
+                            </li>
                         </ul>
                     </div>
                 </section>
             </div>
 
+            <!-- Lockdown projects links -->
             <div class="posts">
-                <section class="post">
-                    <header class="post-header">
-                        <h3 class="post-title">Project #4 - Dotmatrix clock</h2>
-
-                        <p class="post-meta">
-                            By <a class="post-author" href="#">Paul C</a> under <a class="post-category post-category-js" href="#">JavaScript</a><a class="post-category post-category-banglejs" href="#">BangleJS</a>
-                        </p>
-                    </header>
-
-                    <div class="post-description">
-                        <p>
-                            A clock face simulating the classic dotmatrix displays. Shows time, date, compass, and heart rate.
-                        </p>
-                        <p>
-                            This is a basic watchface with nothing too fancy going on. I just like bulky graphics I suppose, and wanted to produce a simple static display that was pleasing to the eye.
-                            It emulates the lovely white-on-blue LCD displays.
-                        </p>
-                        <p>
-                            <i>This is still under development at the time of writing.</i>
-                        </p>
-                        <div class="post-images pure-g">
-                            <div class="pure-u-1-1 pure-u-sm-1-2 pure-u-lg-1-3">
-                                <div class="l-box">
-                                    <img alt="Dotmatrix watchface"
-                                        class="pure-img lazy"
-                                        src="assets/placeholder.png"
-                                        data-src="assets/dotmatrixclock/dotmatrix-clock-screen-shot.png">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-
-            <!-- A wrapper for all the Home IOT blog posts -->
-            <div class="posts">
-                <h1 class="content-subhead">IOT</h1>
+                <h1 class="content-subhead">🔒 Lockdown projects - 2020</h1>
 
                 <!-- A single blog post -->
                 <section class="post">
-                    <header class="post-header">
-                        <h2 class="post-title">Home IOT with Arduino</h2>
-                    </header>
-
+                    <p class="post-meta">
+                        <i class="post-category post-category-spring-1" href="#">Engineering</i>
+                        <i class="post-category post-category-spring-2" href="#">IOT</i>
+                        <i class="post-category post-category-spring-3" href="#">BangleJS</i>
+                        <i class="post-category post-category-spring-4" href="#">Persian</i>
+                        <i class="post-category post-category-spring-5" href="#">Self publishing</i>
+                    </p>
                     <div class="post-description">
                         <p>
-                            Home IOT project using Arduinos to record environmental readings
-                        </p>
-                        <aside>
-                            The most important thing I learnt from this spike was to use <a href="https://platformio.org/" alt="PlatformIO" target="_BLANK">PlatformIO</a> VSCode plugin for development. Typically you use the (very) basic Arduino editor which offers no help. The PlatformIO plugin is simply amazing, offering all the common modern IDE features, and helps you to write and run <b>unit tests</b> for your arduino projects!
-                        </aside>
-                        <h3>Project summary</h3>
-                        <p>
-                            This was more of a spike to see what I can do with the electronics components I had lying around in various boxes.
-                            I wanted to see if I could set up some sort of simple wireless environmental sensor network and have the data consumed and published up to Google IOT services for storage and presentation.
+                            In 2020 my company furloughed 90% of its workforce, me being one of them. Rather than eat
+                            crisps and watch videos, I thought I'd use the time to keep coding but on my own fun
+                            side-projects.
                         </p>
                         <p>
-                            I searched the internet for tutorials doing this sort of thing, and after combining them together I ended up with this functioning project.
+                            The furloughed period lasted 5 months before I left the company in order to get back in to
+                            full time employment. This is a list of the projects I worked on.
                         </p>
-                        <h3>Hardware</h3>
-                        <p>
-                            I found the impressive esp8266 wireless module and a few Arduino Nanos, some HC12 transceivers and a couple DHT11/22 sensors. This appeared to be all I needed to get the project started.
-                            So to begin with I needed a 'hub' to which all the remote wireless sensors would transmit the sensor data to, and in turn was connected to the internet.
-                            This was ideal for the esp8266 module, to which I connected a HC12 transceiver.
-                        </p>
-                        <h3>Cloud setup</h3>
-                        <p>
-                            The next step was to write some code that connected the device to my home wireless network and authenticate with Google IOT. This required all the necessary provisioning of services on Google Cloud, such as:
-                            <ul>
-                                <li>
-                                    IOT Core
-                                </li>
-                                <li>
-                                    MQTT Pub/Sub
-                                </li>
-                            </ul>
-                        </p>
-                        <h3>Construction</h3>
-                        <p>
-                            Now that the esp8266 was on the network and authenticated and communicating with Google IOT services it was time to make the remote sensors. These were simple to set up, just connect an Arduino Nano to a DHT11 sensor (which collects temperature and humidity) and the HC12 wireless module.
-                            It is important that all the HC12 modules are operating on the same channel, baud rate etc. I chose configuration 'FU4' which is for long range comms, these settings are configured using AT commands through a serial connection.
-                        </p>
-                        <p>
-                            With the sensors transmitting data, and the hub device collecting and publishing them to the message queue on Google, it was time to process, store and render the data!
-                        </p>
-                        <h4>Arduino Nano + DHT11 + HC12 sensor transmitter</h4>
-                        <div class="post-images pure-g">
-                            <div class="pure-u-1-1 pure-u-sm-1-2 pure-u-lg-1-3">
-                                <div class="l-box">
-                                    <img alt="Home IOT sensor transmitter"
-                                        class="pure-img lazy"
-                                        src="assets/placeholder.png"
-                                        data-src="assets/homeiot/homeiot-sensor-transmitter.png">
-                                </div>
-                            </div>
-                        </div>
-                        <h4>Huzzah ESP8266 + HC12 receiver 'hub'</h4>
-                        <div class="post-images pure-g">
-                            <div class="pure-u-1-1 pure-u-sm-1-2 pure-u-lg-1-3">
-                                <div class="l-box">
-                                    <img alt="Home IOT hub"
-                                        class="pure-img lazy"
-                                        src="assets/placeholder.png"
-                                        data-src="assets/homeiot/homeiot-receiver.png">
-                                </div>
-                            </div>
-                        </div>
-                        <h3>Cloud processing, storage and presentation</h3>
-                        <p>
-                            I used Googles Firebase for this step. In here I created a serverless-function to process the messages that come in on the message queue, and persist them to the real-time database I set up.
-                            With the messages persisted, I then put together a simple webpage (hosted in Firebase) to render a section of the latest data in graphs.
-                        </p>
-                        <div class="post-images pure-g">
-                            <div class="pure-u-1-1 pure-u-sm-1-2 pure-u-lg-1-3">
-                                <div class="l-box">
-                                    <img alt="Home IOT webpage"
-                                        class="pure-img lazy"
-                                        src="assets/placeholder.png"
-                                        data-src="assets/homeiot/homeiot-webpage.png">
-                                </div>
-                            </div>
-                        </div>
-                        <h3>Conclusion</h3>
-                        <p>
-                            This was a nice little project, that had its learning curves I'll be honest, especially when it comes to the HC12's.. they can be very fussy in their physical setup to get working, such as aerials types, aerial position and orientation, distance etc.
-                            There are plenty of tutorials on doing projects just like this, I usually head over to <a href="https://www.instructables.com/" alt="Instructables" target="_BLANK">Instructables</a> which has many great projects for you to follow.
-                        </p>
+                        <ul class="links">
+                            <li>
+                                <a href="lockdown-diary-part1.html" alt="Lockdown diary part 1">Part 1 (Spring 2020)</a>
+                            </li>
+                            <li>
+                                <a href="lockdown-diary-part2.html" alt="Lockdown diary part 2">Part 2 (Early summer
+                                    2020)</a>
+                            </li>
+                            <li>
+                                <a href="lockdown-diary-part3.html" alt="Lockdown diary part 3">Part 3 (Summer 2020)</a>
+                            </li>
+                        </ul>
                     </div>
                 </section>
-            </div>
-
-            <!-- A wrapper for all the Sacred Geometry blog posts -->
-            <div class="posts">
-                <h1 class="content-subhead">Sacred Geometry</h1>
-
-                <!-- A single blog post -->
-                <section class="post">
-                    <header class="post-header">
-                        <h2 class="post-title">Investigating Sacred Geometry for relaxation</h2>
-                    </header>
-
-                    <div class="post-description">
-                        <p>
-                            Sacred Geometry is really fascinating, and the pictures you produce are exceptional.
-                        </p>
-                        <p>
-                            After doing a lot of coding after the first four weeks of lockdown, I needed to take a break and decompress. I was working more hours than I would at work, and also working seven days a week.. It was hard to stop I was enjoying it all so much.
-                            But still I decided to relax with some drawing, in particular some Sacred Geometry. It is very therapeutic, as all you need is a compass, ruler, and a pen. No artistic skills need for this!
-                        </p>
-                        <p>
-                            What makes this way of drawing special is that the pictures are mathematically perfect, everything is a ratio of something else you draw before-hand. You can only create distances by existing line intersections. You have to watch a video of one being drawn to understand what I mean.
-                        </p>
-                        <p>
-                            I found this fantastic channel on Youtube by <a href="https://www.youtube.com/channel/UCUfc5V23Oy_XD99LHYPvp4Q" alt="Dearing Wang" target="_BLANK">Dearing Wang</a> that is full of timelapse videos of the art being drawn, that you can follow along to.
-                        </p>
-                        <aside>
-                            This is the particular video I followed for my drawing: <a href="https://youtu.be/LkhAELXEcCU" alt="Dearing Wang Pentagram tutorial" target="_BLANK">Pentagram within Pentagram tutorial</a>
-                        </aside>
-                        <h3>Completed drawing</h3>
-                        <p>It took three days, dipping in and out of the drawing. And I also did some of my own patterns as part of experimentation.</p>
-                        <div class="post-images pure-g">
-                            <div class="pure-u-1-1 pure-u-sm-1-2 pure-u-lg-1-3">
-                                <div class="l-box">
-                                    <img alt="Sacred Geometry Pentagrams"
-                                        class="pure-img lazy"
-                                        src="assets/placeholder.png"
-                                        data-src="assets/sacredgeometry/pentagram.png">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-
-            <!-- A wrapper for all the Farsi blog posts -->
-            <div class="posts">
-                <h1 class="content-subhead">Farsi</h1>
-
-                <!-- A single blog post -->
-                <section class="post">
-                    <header class="post-header">
-                        <h2 class="post-title">Learning the Farsi (Persian) alphabet</h2>
-                    </header>
-
-                    <div class="post-description">
-                        <p>
-                            I am left handed, and there are only a couple languages in the world that have a script that is written from right to left.
-                            This is intruinging to me and wanted to see if it felt more natural to write this way (my assumption was yes).
-                            So I picked Farsi (Persian) which is an Indo-European language, which means it has all the familiar sounds like in English,
-                            but it uses a variant of the Arabic script, which is written from right to left, and exceptionally beautiful.
-                        </p>
-                        <p>
-                            I completed the book and I have to say it is fantastic, I have many other books but I get lost in the gramar and unfamiliar script and words.
-                            This just teaches you the alphabet and gives you the ability read words (even if you don't know their translation). It is a great place to start.
-                        </p>
-                        <aside>
-                            You can order a copy of the book from <a href="https://www.amazon.co.uk/dp/1473680026" alt="Persian script hacking" target="_BLANK">Amazon</a>
-                        </aside>
-                        <div class="post-images pure-g">
-                            <div class="pure-u-1-1 pure-u-sm-1-2 pure-u-lg-1-3">
-                                <div class="l-box">
-                                    <img alt="Persian script hacking"
-                                        class="pure-img lazy"
-                                        src="assets/placeholder.png"
-                                        data-src="assets/farsi/farsi-book.jpg">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-
-            <!-- A wrapper for all the Green energy blog posts -->
-            <div class="posts">
-                <h1 class="content-subhead">Thermal motor</h1>
-
-                <!-- A single blog post -->
-                <section class="post">
-                    <header class="post-header">
-                        <h2 class="post-title">Reinventing the Stirling engine</h2>
-                    </header>
-
-                    <div class="post-description">
-                        <aside>
-                            Caution.. TOP SECRET invention!
-                        </aside>
-                        <p>
-                            I have loved the concept of the Stirling engine since before I even had a beard. You may have come accross one before, the classic images is to have one run on the difference between the ambient temperature and the heat from a cup of tea.
-                        </p>
-                        <div class="post-images pure-g">
-                            <div class="pure-u-1-1 pure-u-sm-1-2 pure-u-lg-1-3">
-                                <div class="l-box">
-                                    <img alt="Stirling engine on a cup of tea"
-                                        class="pure-img lazy"
-                                        src="assets/placeholder.png"
-                                        data-src="assets/thermalmotor/stirling-engine-cup-of-tea.png">
-                                </div>
-                            </div>
-                        </div>
-                        <p>
-                            I love the idea of these engines, and think they deserve much more investigation as a potential way of converting the energy the sun hurls at us into mechanical energy.
-                            What I dislike about them is they are very bulky with wheels and rods etc, which I guess doesn't make them very practical in real life. So I went on to design a more compact implementation, more like an electric motor configuration.
-                            I used <a href="https://www.tinkercad.com/" alt="Tinkercad" target="_BLANK">Tinkercad</a> which is an online 3D drawing program, which exports the designs for 3D printing.
-                        </p>
-                        <p>
-                            I had actually started this project many many years ago, and this engine has been through countless itterations. But during the start of the lockdown I finally got to a point
-                            where I think I am close to getting a working design.
-                        </p>
-                        <p>
-                            After finishing the designs I printed the parts out on my 3D printer (a CELRobox) and put it together. Although it works mechanically speaking, it doesn't run under the
-                            temperature differences as desired. I think this is down to various factors, the most important one being the size difference of the power piston and the displacement piston.
-                            So I will have to go back and redesign, and reprint.
-                        </p>
-                        <p>
-                            I have classified this project as top-secret, I don't think there is an engine in the world that has this configuration. So if you are Sir James Dyson, or an actual engineer, I would love to
-                            hear from you and finally get this engine made properly, and out making the lives of other people better.
-                        </p>
-                        <div class="post-images pure-g">
-                            <div class="pure-u-1-1 pure-u-sm-1-2 pure-u-lg-1-3">
-                                <div class="l-box">
-                                    <img alt="Top secret thermal engine"
-                                        class="pure-img lazy"
-                                        src="assets/placeholder.png"
-                                        data-src="assets/thermalmotor/thermalmotor.png">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="post-images pure-g">
-                            <div class="pure-u-1-1 pure-u-sm-1-2 pure-u-lg-1-3">
-                                <div class="l-box">
-                                    <img alt="Top secret thermal engine"
-                                        class="pure-img lazy"
-                                        src="assets/placeholder.png"
-                                        data-src="assets/thermalmotor/thermalmotor-closeup.png">
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </section>
-            </div>
-
-            <!-- A wrapper for all the outro -->
-            <div class="posts">
-                <h1 class="content-subhead">Outro</h1>
-
-                <!-- A single blog post -->
-                <section class="post">
-                    <header class="post-header">
-                        <h2 class="post-title">Final thoughts</h2>
-                    </header>
-
-                    <div class="post-description">
-                        <p>
-                            I hope you have enjoyed these projects. It is quite a lot for 8 weeks, but it has kept me on the straight and narrow, and thoroughly entertained.
-                        </p>
-                        <p>
-                            I am now looking forward to the day when we go back to work, so that I can have a rest from all this!
-                        </p>
-                        <p>
-                            Thanks! Paul C.
-                        </p>
-                        <aside>
-                            Check out the all-new <a href="part2.html" alt="Part two">Part Two!</a>
-                        </aside>
-                    </div>
-                </section>
-            </div>
-
-            <div class="footer">
-                <div class="pure-menu pure-menu-horizontal">
-                    <ul>
-                        <li class="pure-menu-item"><a href="https://www.linkedin.com/in/paul-g-35aa698/" class="pure-menu-link" target="_BLANK">LinkedIn</a></li>
-                        <li class="pure-menu-item"><a href="http://github.com/paulcockrell/" class="pure-menu-link" target="_BLANK">GitHub</a></li>
-                    </ul>
-                </div>
             </div>
         </div>
     </div>
-</div>
-
 </body>
+
 </html>
