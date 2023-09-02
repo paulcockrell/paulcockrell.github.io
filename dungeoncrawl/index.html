@@ -1,0 +1,19 @@
+<html>
+
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+</head>
+
+<body>
+  <h1>Dungeon Crawler - from the book <a href="https://pragprog.com/titles/hwrust/hands-on-rust/" target="_blank">Hands
+      on Rust</a></h1>
+  <canvas id="canvas" width="640" height="480"></canvas>
+  <script src="./dungeoncrawl.js"></script>
+  <script>
+    window.addEventListener("load", async () => {
+      await wasm_bindgen("./dungeoncrawl_bg.wasm");
+    });
+  </script>
+</body>
+
+</html>
