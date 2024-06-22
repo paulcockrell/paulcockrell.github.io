@@ -1,206 +1,285 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A developers project diary." />
+    <title>Projects diary</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/purecss@2.0.1/build/pure-min.css"
+      integrity="sha384-QkSsJi6SGgWv5LAx1TdvIDRf8TW5Ui4NVKqDDlK1wY2eKioo7wvYIJvGWFQSFE4U"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/purecss@2.0.1/build/grids-responsive-min.css"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/9ab75a948a.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="A developers project diary.">
-  <title>Projects diary</title>
-  <link rel="stylesheet" href="./styles.css">
-  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.1/build/pure-min.css"
-    integrity="sha384-QkSsJi6SGgWv5LAx1TdvIDRf8TW5Ui4NVKqDDlK1wY2eKioo7wvYIJvGWFQSFE4U" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.1/build/grids-responsive-min.css"
-    crossorigin="anonymous" />
-  <script src="https://kit.fontawesome.com/9ab75a948a.js" crossorigin="anonymous"></script>
-  <script src="script.js"></script>
-</head>
+  <body>
+    <div id="layout" class="pure-g">
+      <div class="sidebar pure-u-1 pure-u-md-1-4">
+        <div class="header">
+          <img src="assets/me.png" alt="Me" />
+          <h1 class="brand-title">Projects diary</h1>
+          <h2 class="brand-tagline">For prosperity and inspiration</h2>
+          <div class="social">
+            <a
+              href="https://www.linkedin.com/in/paul-g-35aa698/"
+              aria-label="Linkedin"
+              target="_blank"
+            >
+              <i class="fab fa-linkedin fa-lg"></i>
+            </a>
+            <a
+              href="https://github.com/paulcockrell"
+              aria-label="Github"
+              target="_blank"
+            >
+              <i class="fab fa-github fa-lg"></i>
+            </a>
+          </div>
+        </div>
+      </div>
 
-<body>
-  <div id="layout" class="pure-g">
-    <div class="sidebar pure-u-1 pure-u-md-1-4">
-      <div class="header">
-        <img src="assets/me.png" alt="Me" />
-        <h1 class="brand-title">Projects diary</h1>
-        <h2 class="brand-tagline">For prosperity and inspiration</h2>
-        <div class="social">
-          <a href="https://www.linkedin.com/in/paul-g-35aa698/" aria-label="Linkedin" target="_blank">
-            <i class="fab fa-linkedin fa-lg"></i>
-          </a>
-          <a href="https://github.com/paulcockrell" aria-label="Github" target="_blank">
-            <i class="fab fa-github fa-lg"></i>
-          </a>
+      <div class="content pure-u-1 pure-u-md-3-4">
+        <div class="posts">
+          <h1>Projects diary</h1>
+
+          <section class="post">
+            <header class="post-header">
+              <h3 class="post-title">Introduction</h3>
+            </header>
+
+            <div class="post-description">
+              <p>
+                This is a simple site for collecting together some of the things
+                I create outside of work. It's not all coding, we have languages
+                and arty projects too. Something to take a break from the
+                day-job!
+              </p>
+            </div>
+          </section>
+        </div>
+
+        <!-- Programming projects links -->
+        <div class="posts">
+          <h1 class="content-subhead">💻 Programming projects</h1>
+
+          <!-- A single blog post -->
+          <section class="post">
+            <p class="post-meta">
+              <i class="post-category post-category-spring-2" href="#"
+                >Programming</i
+              >
+            </p>
+            <div class="post-description">
+              <p>
+                So I've been learning Rust lang, and the Bevy game engine. It's
+                brilliant. Here is my first game written from scratch using
+                both. There is a lot to learn, Rust isn't easy, Bevy isn't easy,
+                but with enough tutorials and perserverence, you can get there!
+              </p>
+              <p>
+                The game concept it is based on an ancient retro game, found on
+                my cheap hand-held pocket console, it is called "Eating Balls",
+                I think that's a translation issue ;-)
+              </p>
+              <p>
+                You can find the source code
+                <a href="https://github.com/paulcockrell/slidey">here</a>.
+              </p>
+              <p>
+                I recommend this tutorial on
+                <a
+                  href="https://www.youtube.com/watch?v=B6ZFuYYZCSY&list=PLpcPPgvRlEVBjW79uLHNTzEOajVpKLICI&index=2"
+                  alt="Bevy tutorial on youtube"
+                  >Bevy on youtube</a
+                >, theory and practice. It is excellent
+              </p>
+              <ul class="links">
+                <li>
+                  <a href="wizard-maze/index.html" alt="Rust Wizard maze game"
+                    >Rust Wizard maze game</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- A single blog post -->
+          <section class="post">
+            <p class="post-meta">
+              <i class="post-category post-category-spring-2" href="#"
+                >Programming</i
+              >
+            </p>
+            <div class="post-description">
+              <p>
+                I like to try out various programming languages in my spare
+                time, either for fun, or possibly to get familiar before using
+                professionally. If a something has any interest i'll put
+                something up here.
+              </p>
+              <ul class="links">
+                <li>
+                  <a
+                    href="dungeoncrawl/index.html"
+                    alt="Rust Dungeon Crawler game"
+                    >Rust Dungeon Crawler</a
+                  >
+                </li>
+                <li>
+		  Jumpy frog is an original game by myself. It is a vertical scroller. 
+		  You have to make your way to the top lilly to get out of the pond of doom.
+		  Controls are mouse/touch.
+		  <ul>
+			  <li>Hold and press to load jump force</li>
+			  <li>When charging jump press either side of frog to control sideways velocity (direction of jump)</li>
+			  <li>Kill piranha by pressing them, when in range of your killer frog tongue</li>
+		  </ul>
+                  <a
+                    href="jumpyfrog/index.html"
+                    alt="Jumpy frog game (original!)"
+                    >Jumpy Frog</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </section>
+        </div>
+
+        <!-- Art projects links -->
+        <div class="posts">
+          <h1 class="content-subhead">🎨 Art projects</h1>
+
+          <!-- A single blog post -->
+          <section class="post">
+            <p class="post-meta">
+              <i class="post-category post-category-spring-2" href="#"
+                >Cartoons</i
+              >
+              <i class="post-category post-category-spring-3" href="#">Art</i>
+            </p>
+            <div class="post-description">
+              <p>
+                At the start 2022 I was itching to get back in to drawing. I had
+                written and illustrated a book as part of my lockdown projects.
+                But this time I wanted to learn from the masters. So I spent 5
+                months copying a selection of cartoons of varying styles. It is
+                quite incredible the talent they have, and was a pleasure
+                emulating their drawings.
+              </p>
+              <p>
+                I would hand draw my own impression of their work, and then scan
+                this rough draft and use it as a base for the final digital
+                piece. I used a great free bit of software (please choose to
+                support them financially if you use it!) called
+                <a href="https://krita.org" alt="Krita software website"
+                  >Krita</a
+                >. It's amazing that this sort of quality software can be free.
+              </p>
+              <ul class="links">
+                <li>
+                  <a href="art-2022.html" alt="Art projects 2022"
+                    >Art projects (2022)</a
+                  >
+                </li>
+                <li>
+                  <a href="art-2023.html" alt="Art projects 2023"
+                    >Art projects (2023)</a
+                  >
+                </li>
+                <li>
+                  <a href="art-2024.html" alt="Art projects 2024"
+                    >Art projects (2024)</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </section>
+        </div>
+
+        <!-- Lockdown projects links -->
+        <div class="posts">
+          <h1 class="content-subhead">🔒 Lockdown projects - 2020</h1>
+
+          <!-- A single blog post -->
+          <section class="post">
+            <p class="post-meta">
+              <i class="post-category post-category-spring-1" href="#"
+                >Engineering</i
+              >
+              <i class="post-category post-category-spring-2" href="#">IOT</i>
+              <i class="post-category post-category-spring-3" href="#"
+                >BangleJS</i
+              >
+              <i class="post-category post-category-spring-4" href="#"
+                >Persian</i
+              >
+              <i class="post-category post-category-spring-5" href="#"
+                >Self publishing</i
+              >
+            </p>
+            <div class="post-description">
+              <p>
+                In 2020 my company furloughed 90% of its workforce, me being one
+                of them. Rather than eat crisps and watch videos, I thought I'd
+                use the time to keep coding but on my own fun side-projects.
+              </p>
+              <p>
+                The furloughed period lasted 5 months before I left the company
+                in order to get back in to full time employment. This is a list
+                of the projects I worked on.
+              </p>
+              <ul class="links">
+                <li>
+                  <a
+                    href="lockdown-diary-part1.html"
+                    alt="Lockdown diary part 1"
+                    >Part 1 (Spring 2020)</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="lockdown-diary-part2.html"
+                    alt="Lockdown diary part 2"
+                    >Part 2 (Early summer 2020)</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="lockdown-diary-part3.html"
+                    alt="Lockdown diary part 3"
+                    >Part 3 (Summer 2020)</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <div id="container-floating">
+        <div class="nd1 nds">
+          <p class="submenu">
+            <a class="submenu" href="#" alt="Scroll to top">☝️</a>
+          </p>
+        </div>
+
+        <div id="floating-button">
+          <p class="plus">+</p>
+          <p class="edit">+</p>
         </div>
       </div>
     </div>
-
-    <div class="content pure-u-1 pure-u-md-3-4">
-      <div class="posts">
-        <h1>Projects diary</h1>
-
-        <section class="post">
-          <header class="post-header">
-            <h3 class="post-title">Introduction</h3>
-          </header>
-
-          <div class="post-description">
-            <p>
-              This is a simple site for collecting together some of the things I create outside of work.
-              It's not all coding, we have languages and arty projects too. Something to take a break from
-              the day-job!
-            </p>
-          </div>
-        </section>
-      </div>
-
-      <!-- Programming projects links -->
-      <div class="posts">
-        <h1 class="content-subhead">💻 Programming projects</h1>
-
-        <!-- A single blog post -->
-        <section class="post">
-          <p class="post-meta">
-            <i class="post-category post-category-spring-2" href="#">Programming</i>
-          </p>
-          <div class="post-description">
-            <p>
-              So I've been learning Rust lang, and the Bevy game engine.
-              It's brilliant. Here is my first game written from scratch
-              using both. There is a lot to learn, Rust isn't easy, Bevy
-              isn't easy, but with enough tutorials and perserverence, you
-              can get there!
-            </p>
-            <p>
-              The game concept it is based on an ancient retro game, found on my cheap hand-held pocket console, it is
-              called "Eating Balls", I think that's a translation issue ;-)
-            </p>
-            <p>
-              You can find the source code <a href="https://github.com/paulcockrell/slidey">here</a>.
-            </p>
-            <p>
-              I recommend this tutorial on <a
-                href="https://www.youtube.com/watch?v=B6ZFuYYZCSY&list=PLpcPPgvRlEVBjW79uLHNTzEOajVpKLICI&index=2"
-                alt="Bevy tutorial on youtube">Bevy on youtube</a>, theory and practice. It is excellent
-            </p>
-            <ul class="links">
-              <li>
-                <a href="wizard-maze/index.html" alt="Rust Wizard maze game">Rust Wizard maze game</a>
-              </li>
-            </ul>
-          </div>
-        </section>
-
-        <!-- A single blog post -->
-        <section class="post">
-          <p class="post-meta">
-            <i class="post-category post-category-spring-2" href="#">Programming</i>
-          </p>
-          <div class="post-description">
-            <p>
-              I like to try out various programming languages in my spare time, either for
-              fun, or possibly to get familiar before using professionally. If a something
-              has any interest i'll put something up here.
-            </p>
-            <ul class="links">
-              <li>
-                <a href="dungeoncrawl/index.html" alt="Rust Dungeon Crawler game">Rust Dungeon Crawler</a>
-              </li>
-            </ul>
-          </div>
-        </section>
-      </div>
-
-      <!-- Art projects links -->
-      <div class="posts">
-        <h1 class="content-subhead">🎨 Art projects</h1>
-
-        <!-- A single blog post -->
-        <section class="post">
-          <p class="post-meta">
-            <i class="post-category post-category-spring-2" href="#">Cartoons</i>
-            <i class="post-category post-category-spring-3" href="#">Art</i>
-          </p>
-          <div class="post-description">
-            <p>
-              At the start 2022 I was itching to get back in to drawing. I had written and illustrated a
-              book as part of my lockdown projects. But this time I wanted to learn from the masters. So I
-              spent 5 months copying a selection of cartoons of varying styles. It is quite incredible the
-              talent they have, and was a pleasure emulating their drawings.
-            </p>
-            <p>
-              I would hand draw my own impression of their work, and then scan this rough draft and use it
-              as a base for the final digital piece. I used a great free bit of software (please choose to
-              support them financially if you use it!) called <a href="https://krita.org"
-                alt="Krita software website">Krita</a>. It's amazing that this sort of quality software
-              can be free.
-            </p>
-            <ul class="links">
-              <li>
-                <a href="art-2022.html" alt="Art projects 2022">Art projects (2022)</a>
-              </li>
-              <li>
-                <a href="art-2023.html" alt="Art projects 2023">Art projects (2023)</a>
-              </li>
-              <li>
-                <a href="art-2024.html" alt="Art projects 2024">Art projects (2024)</a>
-              </li>
-            </ul>
-          </div>
-        </section>
-      </div>
-
-      <!-- Lockdown projects links -->
-      <div class="posts">
-        <h1 class="content-subhead">🔒 Lockdown projects - 2020</h1>
-
-        <!-- A single blog post -->
-        <section class="post">
-          <p class="post-meta">
-            <i class="post-category post-category-spring-1" href="#">Engineering</i>
-            <i class="post-category post-category-spring-2" href="#">IOT</i>
-            <i class="post-category post-category-spring-3" href="#">BangleJS</i>
-            <i class="post-category post-category-spring-4" href="#">Persian</i>
-            <i class="post-category post-category-spring-5" href="#">Self publishing</i>
-          </p>
-          <div class="post-description">
-            <p>
-              In 2020 my company furloughed 90% of its workforce, me being one of them. Rather than eat
-              crisps and watch videos, I thought I'd use the time to keep coding but on my own fun
-              side-projects.
-            </p>
-            <p>
-              The furloughed period lasted 5 months before I left the company in order to get back in to
-              full time employment. This is a list of the projects I worked on.
-            </p>
-            <ul class="links">
-              <li>
-                <a href="lockdown-diary-part1.html" alt="Lockdown diary part 1">Part 1 (Spring 2020)</a>
-              </li>
-              <li>
-                <a href="lockdown-diary-part2.html" alt="Lockdown diary part 2">Part 2 (Early summer
-                  2020)</a>
-              </li>
-              <li>
-                <a href="lockdown-diary-part3.html" alt="Lockdown diary part 3">Part 3 (Summer 2020)</a>
-              </li>
-            </ul>
-          </div>
-        </section>
-      </div>
-    </div>
-
-    <div id="container-floating">
-      <div class="nd1 nds">
-        <p class="submenu">
-          <a class="submenu" href="#" alt="Scroll to top">☝️</a>
-        </p>
-      </div>
-
-      <div id="floating-button">
-        <p class="plus">+</p>
-        <p class="edit">+</p>
-      </div>
-    </div>
-  </div>
-</body>
-
+  </body>
 </html>
