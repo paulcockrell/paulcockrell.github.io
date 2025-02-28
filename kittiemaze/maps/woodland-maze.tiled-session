@@ -1,0 +1,182 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "island_level_3.map.json",
+    "automapping.whileDrawing": true,
+    "expandedProjectPaths": [
+        "."
+    ],
+    "file.lastUsedOpenFilter": "All Files (*)",
+    "fileStates": {
+        ":/automap-tiles.tsx": {
+            "scaleInDock": 1
+        },
+        "Bridges.tsx": {
+            "scaleInDock": 3.521
+        },
+        "Bush_Tiles.tsx": {
+            "scaleInDock": 3.86,
+            "scaleInEditor": 1
+        },
+        "CollectableItemsNew.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Darker_Grass_Tile_Layers.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Darker_Soil_Ground_Tiles.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Fences.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Grass_Hill_Tiles.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Grass_Tile_Layers.tsx": {
+            "scaleInDock": 1.2832,
+            "scaleInEditor": 1
+        },
+        "Grass_tiles_v2.tsx": {
+            "scaleInDock": 3.86,
+            "scaleInEditor": 1
+        },
+        "ItemShadow.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Items.tsx": {
+            "scaleInDock": 2.6511,
+            "scaleInEditor": 1
+        },
+        "ItemsNew.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Mushrooms_Flowers_tiles.tsx": {
+            "scaleInDock": 3.1387,
+            "scaleInEditor": 1
+        },
+        "Signs.tsx": {
+            "scaleInDock": 4.0706,
+            "scaleInEditor": 1
+        },
+        "SignsNew.tsx": {
+            "scaleInDock": 3.1663,
+            "scaleInEditor": 1
+        },
+        "SignsShapes.tsx": {
+            "scaleInDock": 2.5906,
+            "scaleInEditor": 1
+        },
+        "Soil_Ground_Tiles.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Stone_Ground_Tiles.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Trees, stumps and bushes.tsx": {
+            "scaleInDock": 2.5617,
+            "scaleInEditor": 5.63
+        },
+        "Trees_Stumps_Bushes.tsx": {
+            "scaleInDock": 2.9001,
+            "scaleInEditor": 1
+        },
+        "forest_level_1.map.json": {
+            "expandedObjectLayers": [
+                24,
+                29
+            ],
+            "scale": 2.13,
+            "selectedLayer": 12,
+            "viewCenter": {
+                "x": 240.14084507042253,
+                "y": 159.85915492957747
+            }
+        },
+        "forest_level_1.map.json#ItemsNew": {
+            "scaleInDock": 1
+        },
+        "forest_level_2.map.json": {
+            "expandedObjectLayers": [
+                26,
+                24,
+                23
+            ],
+            "scale": 2.0504,
+            "selectedLayer": 8,
+            "viewCenter": {
+                "x": 240.1970347249317,
+                "y": 157.28638314475225
+            }
+        },
+        "island_level_3.map.json": {
+            "expandedObjectLayers": [
+                26,
+                23,
+                24
+            ],
+            "scale": 2.3814,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 198.8326194675401,
+                "y": 133.32493491223647
+            }
+        },
+        "main_menu.map.json": {
+            "scale": 1.69,
+            "selectedLayer": 8,
+            "viewCenter": {
+                "x": 239.9408284023669,
+                "y": 160.35502958579883
+            }
+        },
+        "test.tmx": {
+            "scale": 1.76,
+            "selectedLayer": 7,
+            "viewCenter": {
+                "x": 126.13636363636364,
+                "y": 166.19318181818184
+            }
+        }
+    },
+    "last.externalTilesetPath": "/Users/macoperator/Development/PersonalDevelopment/kaplay/locksmith/maps",
+    "last.imagePath": "/Users/macoperator/Development/PersonalDevelopment/kaplay/locksmith/maps",
+    "map.lastUsedFormat": "json",
+    "map.tileHeight": 16,
+    "map.tileWidth": 16,
+    "openFiles": [
+        "island_level_3.map.json"
+    ],
+    "project": "woodland-maze.tiled-project",
+    "recentFiles": [
+        "island_level_3.map.json",
+        "main_menu.map.json",
+        "forest_level_1.map.json",
+        "forest_level_2.map.json",
+        "SignsShapes.tsx",
+        "CollectableItemsNew.tsx",
+        "ItemsNew.tsx",
+        "SignsNew.tsx",
+        "Signs.tsx",
+        "ItemShadow.tsx",
+        "Items.tsx",
+        "Trees_Stumps_Bushes.tsx"
+    ],
+    "tileset.lastUsedFilter": "Tiled tileset files (*.tsx *.xml)",
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.tileSize": {
+        "height": 16,
+        "width": 16
+    }
+}
