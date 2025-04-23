@@ -21356,7 +21356,7 @@ var shadow$provide = {};
               1,
               [
                 Y,
-                "relative z-30 flex flex-1 flex-col justify-center gap-1 border-t rounded-tl-lg border-primary text-left even:border sm:border sm:px-4 sm:py-2",
+                "relative z-30 flex flex-1 flex-col justify-center gap-1 border-t rounded-tl border-primary text-left even:border border px-4 py-2",
               ],
               null,
             ),
@@ -21400,7 +21400,7 @@ var shadow$provide = {};
               1,
               [
                 Y,
-                "relative z-30 flex flex-1 flex-col justify-center gap-1 border-t rounded-tr-lg border-primary text-left sm:border sm:border-l-0 sm:px-4 sm:py-2",
+                "relative z-30 flex flex-1 flex-col justify-center gap-1 border-t rounded-tr border-primary text-left border border-l-0 px-4 py-2",
               ],
               null,
             ),
@@ -21444,7 +21444,7 @@ var shadow$provide = {};
               1,
               [
                 Y,
-                "relative z-30 flex flex-1 flex-col justify-center gap-1 border-t rounded-bl-lg border-primary text-left sm:border sm:border-t-0 sm:px-4 sm:py-2",
+                "relative z-30 flex flex-1 flex-col justify-center gap-1 border-t rounded-bl border-primary text-left border border-t-0 px-4 py-2",
               ],
               null,
             ),
@@ -21488,7 +21488,7 @@ var shadow$provide = {};
               1,
               [
                 Y,
-                "relative z-30 flex flex-1 flex-col justify-center gap-1 border-t rounded-br-lg border-primary text-left sm:border sm:border-t-0 sm:border-l-0 sm:px-4 sm:py-2",
+                "relative z-30 flex flex-1 flex-col justify-center gap-1 border-t rounded-br border-primary text-left border border-t-0 border-l-0 px-4 py-2",
               ],
               null,
             ),
