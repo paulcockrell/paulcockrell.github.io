@@ -12,7 +12,7 @@ var new_game_state = zombiedice.state.state_manager.check_hand(zombiedice.state.
 return zombiedice.state.state_manager.save_game_state_BANG_(game_state,new_game_state);
 });
 zombiedice.frontend.app.looser_alert_component = (function zombiedice$frontend$app$looser_alert_component(game_state){
-return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div","div",1057191632),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"bg-secondary/50 border-b border-secondary/40 text-amber-700 text-sm p-4 flex justify-between"], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div","div",1057191632),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.flex.items-center","div.flex.items-center",-1537844053),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"span.pr-4","span.pr-4",-260115100),"\uD83D\uDCA5"], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"p","p",151049309),[cljs.core.str.cljs$core$IFn$_invoke$arity$1(new cljs.core.Keyword(null,"name","name",1843675177).cljs$core$IFn$_invoke$arity$1(zombiedice.state.state_manager.get_current_player(cljs.core.deref(game_state))))," has been shot too many times!"].join('')], null)], null)], null)], null);
+return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div","div",1057191632),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"bg-secondary/50 border-b border-secondary/40 text-amber-700 text-sm p-4 flex justify-between"], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div","div",1057191632),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.flex.items-center","div.flex.items-center",-1537844053),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"span.pr-4","span.pr-4",-260115100),"\uD83D\uDCA5"], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"p","p",151049309),[cljs.core.str.cljs$core$IFn$_invoke$arity$1(new cljs.core.Keyword(null,"name","name",1843675177).cljs$core$IFn$_invoke$arity$1(zombiedice.state.state_manager.get_current_player(cljs.core.deref(game_state))))," has been shot too many times. You loose this rounds brains"].join('')], null)], null)], null)], null);
 });
 zombiedice.frontend.app.winner_alert_component = (function zombiedice$frontend$app$winner_alert_component(game_state){
 return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div","div",1057191632),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"bg-primary/50 border-b border-primary/40 text-lime-700 text-sm p-4 flex justify-between"], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div","div",1057191632),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div.flex.items-center","div.flex.items-center",-1537844053),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"span.pr-4","span.pr-4",-260115100),"\uD83E\uDDDF\u200D\u2642\uFE0F"], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"p","p",151049309),[cljs.core.str.cljs$core$IFn$_invoke$arity$1(new cljs.core.Keyword(null,"name","name",1843675177).cljs$core$IFn$_invoke$arity$1(zombiedice.state.state_manager.get_current_player(cljs.core.deref(game_state))))," has won!"].join('')], null)], null)], null)], null);
@@ -25,33 +25,36 @@ zombiedice.frontend.app.score_board_table = (function zombiedice$frontend$app$sc
 var players = zombiedice.state.state_manager.get_players_sorted(cljs.core.deref(game_state));
 var current_player = zombiedice.state.state_manager.get_current_player(cljs.core.deref(game_state));
 if(((0) < cljs.core.count(players))){
-return new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"table","table",-564943036),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"w-full caption-bottom text-sm"], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"thead","thead",-291875296),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"[&_tr]:border-b"], null),new cljs.core.PersistentVector(null, 6, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"tr","tr",-1424774646),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted"], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"th","th",-545608566),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"h-10 px-2 text-left align-middle font-medium text-muted-foreground w-[100px]"], null),"Name"], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"th","th",-545608566),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"h-10 px-2 align-middle font-medium text-muted-foreground text-right"], null),"Position"], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"th","th",-545608566),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"h-10 px-2 align-middle font-medium text-muted-foreground text-right"], null),"Rank"], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"th","th",-545608566),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"h-10 px-2 align-middle font-medium text-muted-foreground text-right"], null),"Brains"], null)], null)], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"tbody","tbody",-80678300),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"[&_tr:last-child]:border-0"], null),(function (){var iter__5480__auto__ = (function zombiedice$frontend$app$score_board_table_$_iter__12054(s__12055){
+return new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"table","table",-564943036),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"w-full caption-bottom text-sm"], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"thead","thead",-291875296),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"[&_tr]:border-b"], null),new cljs.core.PersistentVector(null, 6, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"tr","tr",-1424774646),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted"], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"th","th",-545608566),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"h-10 px-2 text-left align-middle font-medium text-muted-foreground w-[100px]"], null),"Name"], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"th","th",-545608566),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"h-10 px-2 align-middle font-medium text-muted-foreground text-right"], null),"Position"], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"th","th",-545608566),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"h-10 px-2 align-middle font-medium text-muted-foreground text-right"], null),"Rank"], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"th","th",-545608566),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"h-10 px-2 align-middle font-medium text-muted-foreground text-right"], null),"Brains"], null)], null)], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"tbody","tbody",-80678300),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"[&_tr:last-child]:border-0"], null),cljs.core.doall.cljs$core$IFn$_invoke$arity$1((function (){var iter__5480__auto__ = (function zombiedice$frontend$app$score_board_table_$_iter__12487(s__12488){
 return (new cljs.core.LazySeq(null,(function (){
-var s__12055__$1 = s__12055;
+var s__12488__$1 = s__12488;
 while(true){
-var temp__5804__auto__ = cljs.core.seq(s__12055__$1);
+var temp__5804__auto__ = cljs.core.seq(s__12488__$1);
 if(temp__5804__auto__){
-var s__12055__$2 = temp__5804__auto__;
-if(cljs.core.chunked_seq_QMARK_(s__12055__$2)){
-var c__5478__auto__ = cljs.core.chunk_first(s__12055__$2);
+var s__12488__$2 = temp__5804__auto__;
+if(cljs.core.chunked_seq_QMARK_(s__12488__$2)){
+var c__5478__auto__ = cljs.core.chunk_first(s__12488__$2);
 var size__5479__auto__ = cljs.core.count(c__5478__auto__);
-var b__12057 = cljs.core.chunk_buffer(size__5479__auto__);
-if((function (){var i__12056 = (0);
+var b__12490 = cljs.core.chunk_buffer(size__5479__auto__);
+if((function (){var i__12489 = (0);
 while(true){
-if((i__12056 < size__5479__auto__)){
-var map__12058 = cljs.core._nth(c__5478__auto__,i__12056);
-var map__12058__$1 = cljs.core.__destructure_map(map__12058);
-var name = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__12058__$1,new cljs.core.Keyword(null,"name","name",1843675177));
-var position = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__12058__$1,new cljs.core.Keyword(null,"position","position",-2011731912));
-var brains = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__12058__$1,new cljs.core.Keyword(null,"brains","brains",-64810970));
-cljs.core.chunk_append(b__12057,(function (){var is_current_player_QMARK_ = cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(name,new cljs.core.Keyword(null,"name","name",1843675177).cljs$core$IFn$_invoke$arity$1(current_player));
+if((i__12489 < size__5479__auto__)){
+var map__12491 = cljs.core._nth(c__5478__auto__,i__12489);
+var map__12491__$1 = cljs.core.__destructure_map(map__12491);
+var name = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__12491__$1,new cljs.core.Keyword(null,"name","name",1843675177));
+var position = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__12491__$1,new cljs.core.Keyword(null,"position","position",-2011731912));
+var brains = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__12491__$1,new cljs.core.Keyword(null,"brains","brains",-64810970));
+cljs.core.chunk_append(b__12490,(function (){var is_current_player_QMARK_ = cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(name,new cljs.core.Keyword(null,"name","name",1843675177).cljs$core$IFn$_invoke$arity$1(current_player));
 var tr_class = ((is_current_player_QMARK_)?"border-b bg-primary/10":"border-b");
-var player_name = ((is_current_player_QMARK_)?[cljs.core.str.cljs$core$IFn$_invoke$arity$1(name)," \uD83C\uDFB2"].join(''):name);
-return new cljs.core.PersistentVector(null, 6, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"tr","tr",-1424774646),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"key","key",-1516042587),name,new cljs.core.Keyword(null,"class","class",-2030961996),tr_class], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"td","td",1479933353),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"p-2 align-middle font-medium"], null),player_name], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"td","td",1479933353),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"p-2 align-middle text-right"], null),position], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"td","td",1479933353),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"p-2 align-middle text-right"], null),(0)], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"td","td",1479933353),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"p-2 align-middle text-right"], null),brains], null)], null);
+var player_rank = zombiedice.state.state_manager.get_player_rank(cljs.core.deref(game_state),name);
+var action = zombiedice.state.state_manager.get_action(game_state);
+var player_name = (((!(is_current_player_QMARK_)))?name:((cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(action,new cljs.core.Keyword(null,"game-over","game-over",-607322695)))?[cljs.core.str.cljs$core$IFn$_invoke$arity$1(name)," \uD83C\uDFC6"].join(''):[cljs.core.str.cljs$core$IFn$_invoke$arity$1(name)," \uD83C\uDFB2"].join('')
+));
+return new cljs.core.PersistentVector(null, 6, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"tr","tr",-1424774646),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"key","key",-1516042587),name,new cljs.core.Keyword(null,"class","class",-2030961996),tr_class], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"td","td",1479933353),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"p-2 align-middle font-medium"], null),player_name], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"td","td",1479933353),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"p-2 align-middle text-right"], null),position], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"td","td",1479933353),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"p-2 align-middle text-right"], null),player_rank], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"td","td",1479933353),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"p-2 align-middle text-right"], null),brains], null)], null);
 })());
 
-var G__12071 = (i__12056 + (1));
-i__12056 = G__12071;
+var G__12504 = (i__12489 + (1));
+i__12489 = G__12504;
 continue;
 } else {
 return true;
@@ -59,21 +62,24 @@ return true;
 break;
 }
 })()){
-return cljs.core.chunk_cons(cljs.core.chunk(b__12057),zombiedice$frontend$app$score_board_table_$_iter__12054(cljs.core.chunk_rest(s__12055__$2)));
+return cljs.core.chunk_cons(cljs.core.chunk(b__12490),zombiedice$frontend$app$score_board_table_$_iter__12487(cljs.core.chunk_rest(s__12488__$2)));
 } else {
-return cljs.core.chunk_cons(cljs.core.chunk(b__12057),null);
+return cljs.core.chunk_cons(cljs.core.chunk(b__12490),null);
 }
 } else {
-var map__12059 = cljs.core.first(s__12055__$2);
-var map__12059__$1 = cljs.core.__destructure_map(map__12059);
-var name = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__12059__$1,new cljs.core.Keyword(null,"name","name",1843675177));
-var position = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__12059__$1,new cljs.core.Keyword(null,"position","position",-2011731912));
-var brains = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__12059__$1,new cljs.core.Keyword(null,"brains","brains",-64810970));
+var map__12492 = cljs.core.first(s__12488__$2);
+var map__12492__$1 = cljs.core.__destructure_map(map__12492);
+var name = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__12492__$1,new cljs.core.Keyword(null,"name","name",1843675177));
+var position = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__12492__$1,new cljs.core.Keyword(null,"position","position",-2011731912));
+var brains = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__12492__$1,new cljs.core.Keyword(null,"brains","brains",-64810970));
 return cljs.core.cons((function (){var is_current_player_QMARK_ = cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(name,new cljs.core.Keyword(null,"name","name",1843675177).cljs$core$IFn$_invoke$arity$1(current_player));
 var tr_class = ((is_current_player_QMARK_)?"border-b bg-primary/10":"border-b");
-var player_name = ((is_current_player_QMARK_)?[cljs.core.str.cljs$core$IFn$_invoke$arity$1(name)," \uD83C\uDFB2"].join(''):name);
-return new cljs.core.PersistentVector(null, 6, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"tr","tr",-1424774646),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"key","key",-1516042587),name,new cljs.core.Keyword(null,"class","class",-2030961996),tr_class], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"td","td",1479933353),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"p-2 align-middle font-medium"], null),player_name], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"td","td",1479933353),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"p-2 align-middle text-right"], null),position], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"td","td",1479933353),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"p-2 align-middle text-right"], null),(0)], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"td","td",1479933353),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"p-2 align-middle text-right"], null),brains], null)], null);
-})(),zombiedice$frontend$app$score_board_table_$_iter__12054(cljs.core.rest(s__12055__$2)));
+var player_rank = zombiedice.state.state_manager.get_player_rank(cljs.core.deref(game_state),name);
+var action = zombiedice.state.state_manager.get_action(game_state);
+var player_name = (((!(is_current_player_QMARK_)))?name:((cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(action,new cljs.core.Keyword(null,"game-over","game-over",-607322695)))?[cljs.core.str.cljs$core$IFn$_invoke$arity$1(name)," \uD83C\uDFC6"].join(''):[cljs.core.str.cljs$core$IFn$_invoke$arity$1(name)," \uD83C\uDFB2"].join('')
+));
+return new cljs.core.PersistentVector(null, 6, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"tr","tr",-1424774646),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"key","key",-1516042587),name,new cljs.core.Keyword(null,"class","class",-2030961996),tr_class], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"td","td",1479933353),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"p-2 align-middle font-medium"], null),player_name], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"td","td",1479933353),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"p-2 align-middle text-right"], null),position], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"td","td",1479933353),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"p-2 align-middle text-right"], null),player_rank], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"td","td",1479933353),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"p-2 align-middle text-right"], null),brains], null)], null);
+})(),zombiedice$frontend$app$score_board_table_$_iter__12487(cljs.core.rest(s__12488__$2)));
 }
 } else {
 return null;
@@ -83,7 +89,7 @@ break;
 }),null,null));
 });
 return iter__5480__auto__(players);
-})()], null)], null);
+})())], null)], null);
 } else {
 return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"table","table",-564943036),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"w-full caption-bottom text-sm"], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"tbody","tbody",-80678300),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"[&_tr:last-child]:border-0"], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"tr","tr",-1424774646),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"border-b"], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"td","td",1479933353),"No players - add between 2 and 5 to start"], null)], null)], null)], null);
 }
@@ -91,30 +97,30 @@ return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMP
 zombiedice.frontend.app.current_round_stats_table = (function zombiedice$frontend$app$current_round_stats_table(game_state){
 var throws$ = zombiedice.state.state_manager.get_throws(game_state);
 var throw_totals = zombiedice.state.state_manager.get_throw_totals(cljs.core.deref(game_state));
-return new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"table","table",-564943036),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"w-full caption-bottom text-sm"], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"thead","thead",-291875296),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"[&_tr]:border-b"], null),new cljs.core.PersistentVector(null, 6, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"tr","tr",-1424774646),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted"], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"th","th",-545608566),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"h-10 px-2 text-left align-middle font-medium text-muted-foreground w-[100px]"], null),"Throw"], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"th","th",-545608566),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"h-10 px-2 align-middle font-medium text-muted-foreground text-right"], null),"Feet"], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"th","th",-545608566),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"h-10 px-2 align-middle font-medium text-muted-foreground text-right"], null),"Shotguns"], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"th","th",-545608566),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"h-10 px-2 align-middle font-medium text-muted-foreground text-right"], null),"Brains"], null)], null)], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"tbody","tbody",-80678300),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"[&_tr:last-child]:border-0"], null),(function (){var iter__5480__auto__ = (function zombiedice$frontend$app$current_round_stats_table_$_iter__12060(s__12061){
+return new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"table","table",-564943036),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"w-full caption-bottom text-sm"], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"thead","thead",-291875296),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"[&_tr]:border-b"], null),new cljs.core.PersistentVector(null, 6, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"tr","tr",-1424774646),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted"], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"th","th",-545608566),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"h-10 px-2 text-left align-middle font-medium text-muted-foreground w-[100px]"], null),"Throw"], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"th","th",-545608566),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"h-10 px-2 align-middle font-medium text-muted-foreground text-right"], null),"Feet"], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"th","th",-545608566),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"h-10 px-2 align-middle font-medium text-muted-foreground text-right"], null),"Shotguns"], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"th","th",-545608566),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"h-10 px-2 align-middle font-medium text-muted-foreground text-right"], null),"Brains"], null)], null)], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"tbody","tbody",-80678300),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"[&_tr:last-child]:border-0"], null),(function (){var iter__5480__auto__ = (function zombiedice$frontend$app$current_round_stats_table_$_iter__12493(s__12494){
 return (new cljs.core.LazySeq(null,(function (){
-var s__12061__$1 = s__12061;
+var s__12494__$1 = s__12494;
 while(true){
-var temp__5804__auto__ = cljs.core.seq(s__12061__$1);
+var temp__5804__auto__ = cljs.core.seq(s__12494__$1);
 if(temp__5804__auto__){
-var s__12061__$2 = temp__5804__auto__;
-if(cljs.core.chunked_seq_QMARK_(s__12061__$2)){
-var c__5478__auto__ = cljs.core.chunk_first(s__12061__$2);
+var s__12494__$2 = temp__5804__auto__;
+if(cljs.core.chunked_seq_QMARK_(s__12494__$2)){
+var c__5478__auto__ = cljs.core.chunk_first(s__12494__$2);
 var size__5479__auto__ = cljs.core.count(c__5478__auto__);
-var b__12063 = cljs.core.chunk_buffer(size__5479__auto__);
-if((function (){var i__12062 = (0);
+var b__12496 = cljs.core.chunk_buffer(size__5479__auto__);
+if((function (){var i__12495 = (0);
 while(true){
-if((i__12062 < size__5479__auto__)){
-var map__12064 = cljs.core._nth(c__5478__auto__,i__12062);
-var map__12064__$1 = cljs.core.__destructure_map(map__12064);
-var throw$ = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__12064__$1,new cljs.core.Keyword(null,"throw","throw",-1044625833));
-var feet = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__12064__$1,new cljs.core.Keyword(null,"feet","feet",-92616651));
-var shots = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__12064__$1,new cljs.core.Keyword(null,"shots","shots",-1155689265));
-var brains = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__12064__$1,new cljs.core.Keyword(null,"brains","brains",-64810970));
-cljs.core.chunk_append(b__12063,cljs.core.with_meta(new cljs.core.PersistentVector(null, 6, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"tr","tr",-1424774646),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted"], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"td","td",1479933353),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"p-2 align-middle font-medium"], null),throw$], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"td","td",1479933353),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"p-2 align-middle text-right"], null),feet], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"td","td",1479933353),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"p-2 align-middle text-right"], null),shots], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"td","td",1479933353),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"p-2 align-middle text-right"], null),brains], null)], null),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"key","key",-1516042587),cljs.core.random_uuid()], null)));
+if((i__12495 < size__5479__auto__)){
+var map__12497 = cljs.core._nth(c__5478__auto__,i__12495);
+var map__12497__$1 = cljs.core.__destructure_map(map__12497);
+var throw$ = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__12497__$1,new cljs.core.Keyword(null,"throw","throw",-1044625833));
+var feet = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__12497__$1,new cljs.core.Keyword(null,"feet","feet",-92616651));
+var shots = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__12497__$1,new cljs.core.Keyword(null,"shots","shots",-1155689265));
+var brains = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__12497__$1,new cljs.core.Keyword(null,"brains","brains",-64810970));
+cljs.core.chunk_append(b__12496,cljs.core.with_meta(new cljs.core.PersistentVector(null, 6, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"tr","tr",-1424774646),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted"], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"td","td",1479933353),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"p-2 align-middle font-medium"], null),throw$], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"td","td",1479933353),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"p-2 align-middle text-right"], null),feet], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"td","td",1479933353),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"p-2 align-middle text-right"], null),shots], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"td","td",1479933353),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"p-2 align-middle text-right"], null),brains], null)], null),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"key","key",-1516042587),cljs.core.random_uuid()], null)));
 
-var G__12072 = (i__12062 + (1));
-i__12062 = G__12072;
+var G__12505 = (i__12495 + (1));
+i__12495 = G__12505;
 continue;
 } else {
 return true;
@@ -122,18 +128,18 @@ return true;
 break;
 }
 })()){
-return cljs.core.chunk_cons(cljs.core.chunk(b__12063),zombiedice$frontend$app$current_round_stats_table_$_iter__12060(cljs.core.chunk_rest(s__12061__$2)));
+return cljs.core.chunk_cons(cljs.core.chunk(b__12496),zombiedice$frontend$app$current_round_stats_table_$_iter__12493(cljs.core.chunk_rest(s__12494__$2)));
 } else {
-return cljs.core.chunk_cons(cljs.core.chunk(b__12063),null);
+return cljs.core.chunk_cons(cljs.core.chunk(b__12496),null);
 }
 } else {
-var map__12065 = cljs.core.first(s__12061__$2);
-var map__12065__$1 = cljs.core.__destructure_map(map__12065);
-var throw$ = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__12065__$1,new cljs.core.Keyword(null,"throw","throw",-1044625833));
-var feet = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__12065__$1,new cljs.core.Keyword(null,"feet","feet",-92616651));
-var shots = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__12065__$1,new cljs.core.Keyword(null,"shots","shots",-1155689265));
-var brains = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__12065__$1,new cljs.core.Keyword(null,"brains","brains",-64810970));
-return cljs.core.cons(cljs.core.with_meta(new cljs.core.PersistentVector(null, 6, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"tr","tr",-1424774646),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted"], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"td","td",1479933353),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"p-2 align-middle font-medium"], null),throw$], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"td","td",1479933353),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"p-2 align-middle text-right"], null),feet], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"td","td",1479933353),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"p-2 align-middle text-right"], null),shots], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"td","td",1479933353),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"p-2 align-middle text-right"], null),brains], null)], null),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"key","key",-1516042587),cljs.core.random_uuid()], null)),zombiedice$frontend$app$current_round_stats_table_$_iter__12060(cljs.core.rest(s__12061__$2)));
+var map__12498 = cljs.core.first(s__12494__$2);
+var map__12498__$1 = cljs.core.__destructure_map(map__12498);
+var throw$ = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__12498__$1,new cljs.core.Keyword(null,"throw","throw",-1044625833));
+var feet = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__12498__$1,new cljs.core.Keyword(null,"feet","feet",-92616651));
+var shots = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__12498__$1,new cljs.core.Keyword(null,"shots","shots",-1155689265));
+var brains = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__12498__$1,new cljs.core.Keyword(null,"brains","brains",-64810970));
+return cljs.core.cons(cljs.core.with_meta(new cljs.core.PersistentVector(null, 6, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"tr","tr",-1424774646),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted"], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"td","td",1479933353),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"p-2 align-middle font-medium"], null),throw$], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"td","td",1479933353),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"p-2 align-middle text-right"], null),feet], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"td","td",1479933353),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"p-2 align-middle text-right"], null),shots], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"td","td",1479933353),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"p-2 align-middle text-right"], null),brains], null)], null),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"key","key",-1516042587),cljs.core.random_uuid()], null)),zombiedice$frontend$app$current_round_stats_table_$_iter__12493(cljs.core.rest(s__12494__$2)));
 }
 } else {
 return null;
@@ -153,8 +159,8 @@ zombiedice.frontend.app.add_player_component = (function zombiedice$frontend$app
 var name = reagent.core.atom.cljs$core$IFn$_invoke$arity$1("");
 return (function (){
 if(cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"action","action",-811238024).cljs$core$IFn$_invoke$arity$1(cljs.core.deref(game_state)),new cljs.core.Keyword(null,"adding-players","adding-players",-1752232424))){
-return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"<>","<>",1280186386),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [zombiedice.frontend.components.divider_horizontal], null),new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div","div",1057191632),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"grid grid-flow-col grid-rows-1 gap-4"], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [zombiedice.frontend.components.input,new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null,"placeholder","placeholder",-104873083),"Player name",new cljs.core.Keyword(null,"value","value",305978217),cljs.core.deref(name),new cljs.core.Keyword(null,"on-change","on-change",-732046149),(function (p1__12066_SHARP_){
-return cljs.core.reset_BANG_(name,p1__12066_SHARP_.target.value);
+return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"<>","<>",1280186386),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [zombiedice.frontend.components.divider_horizontal], null),new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div","div",1057191632),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"grid grid-flow-col grid-rows-1 gap-4"], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [zombiedice.frontend.components.input,new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null,"placeholder","placeholder",-104873083),"Player name",new cljs.core.Keyword(null,"value","value",305978217),cljs.core.deref(name),new cljs.core.Keyword(null,"on-change","on-change",-732046149),(function (p1__12499_SHARP_){
+return cljs.core.reset_BANG_(name,p1__12499_SHARP_.target.value);
 }),new cljs.core.Keyword(null,"on-key-press","on-key-press",-399563677),(function (e){
 if(cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(e.key,"Enter")){
 zombiedice.frontend.app.update_players(game_state,name);
@@ -193,25 +199,25 @@ return new cljs.core.PersistentVector(null, 6, 5, cljs.core.PersistentVector.EMP
 });
 zombiedice.frontend.app.current_dice_component = (function zombiedice$frontend$app$current_dice_component(game_state){
 var dices = zombiedice.state.state_manager.get_current_dice(cljs.core.deref(game_state));
-return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div","div",1057191632),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"flex justify-center gap-4 text-4xl"], null),(function (){var iter__5480__auto__ = (function zombiedice$frontend$app$current_dice_component_$_iter__12067(s__12068){
+return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div","div",1057191632),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"flex justify-center gap-4 text-4xl"], null),(function (){var iter__5480__auto__ = (function zombiedice$frontend$app$current_dice_component_$_iter__12500(s__12501){
 return (new cljs.core.LazySeq(null,(function (){
-var s__12068__$1 = s__12068;
+var s__12501__$1 = s__12501;
 while(true){
-var temp__5804__auto__ = cljs.core.seq(s__12068__$1);
+var temp__5804__auto__ = cljs.core.seq(s__12501__$1);
 if(temp__5804__auto__){
-var s__12068__$2 = temp__5804__auto__;
-if(cljs.core.chunked_seq_QMARK_(s__12068__$2)){
-var c__5478__auto__ = cljs.core.chunk_first(s__12068__$2);
+var s__12501__$2 = temp__5804__auto__;
+if(cljs.core.chunked_seq_QMARK_(s__12501__$2)){
+var c__5478__auto__ = cljs.core.chunk_first(s__12501__$2);
 var size__5479__auto__ = cljs.core.count(c__5478__auto__);
-var b__12070 = cljs.core.chunk_buffer(size__5479__auto__);
-if((function (){var i__12069 = (0);
+var b__12503 = cljs.core.chunk_buffer(size__5479__auto__);
+if((function (){var i__12502 = (0);
 while(true){
-if((i__12069 < size__5479__auto__)){
-var dice = cljs.core._nth(c__5478__auto__,i__12069);
-cljs.core.chunk_append(b__12070,cljs.core.with_meta(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"img","img",1442687358),new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"src","src",-1651076051),["/images/dice-",cljs.core.name(new cljs.core.Keyword(null,"color","color",1011675173).cljs$core$IFn$_invoke$arity$1(dice)),"-",cljs.core.name(new cljs.core.Keyword(null,"face","face",-1356480717).cljs$core$IFn$_invoke$arity$1(dice)),".png"].join(''),new cljs.core.Keyword(null,"alt","alt",-3214426),"Descriptive text",new cljs.core.Keyword(null,"style","style",-496642736),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"width","width",-384071477),"80px",new cljs.core.Keyword(null,"height","height",1025178622),"auto"], null)], null)], null),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"key","key",-1516042587),cljs.core.random_uuid()], null)));
+if((i__12502 < size__5479__auto__)){
+var dice = cljs.core._nth(c__5478__auto__,i__12502);
+cljs.core.chunk_append(b__12503,cljs.core.with_meta(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"img","img",1442687358),new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"src","src",-1651076051),["/images/dice-",cljs.core.name(new cljs.core.Keyword(null,"color","color",1011675173).cljs$core$IFn$_invoke$arity$1(dice)),"-",cljs.core.name(new cljs.core.Keyword(null,"face","face",-1356480717).cljs$core$IFn$_invoke$arity$1(dice)),".png"].join(''),new cljs.core.Keyword(null,"alt","alt",-3214426),"Descriptive text",new cljs.core.Keyword(null,"style","style",-496642736),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"width","width",-384071477),"80px",new cljs.core.Keyword(null,"height","height",1025178622),"auto"], null)], null)], null),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"key","key",-1516042587),cljs.core.random_uuid()], null)));
 
-var G__12073 = (i__12069 + (1));
-i__12069 = G__12073;
+var G__12506 = (i__12502 + (1));
+i__12502 = G__12506;
 continue;
 } else {
 return true;
@@ -219,13 +225,13 @@ return true;
 break;
 }
 })()){
-return cljs.core.chunk_cons(cljs.core.chunk(b__12070),zombiedice$frontend$app$current_dice_component_$_iter__12067(cljs.core.chunk_rest(s__12068__$2)));
+return cljs.core.chunk_cons(cljs.core.chunk(b__12503),zombiedice$frontend$app$current_dice_component_$_iter__12500(cljs.core.chunk_rest(s__12501__$2)));
 } else {
-return cljs.core.chunk_cons(cljs.core.chunk(b__12070),null);
+return cljs.core.chunk_cons(cljs.core.chunk(b__12503),null);
 }
 } else {
-var dice = cljs.core.first(s__12068__$2);
-return cljs.core.cons(cljs.core.with_meta(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"img","img",1442687358),new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"src","src",-1651076051),["/images/dice-",cljs.core.name(new cljs.core.Keyword(null,"color","color",1011675173).cljs$core$IFn$_invoke$arity$1(dice)),"-",cljs.core.name(new cljs.core.Keyword(null,"face","face",-1356480717).cljs$core$IFn$_invoke$arity$1(dice)),".png"].join(''),new cljs.core.Keyword(null,"alt","alt",-3214426),"Descriptive text",new cljs.core.Keyword(null,"style","style",-496642736),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"width","width",-384071477),"80px",new cljs.core.Keyword(null,"height","height",1025178622),"auto"], null)], null)], null),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"key","key",-1516042587),cljs.core.random_uuid()], null)),zombiedice$frontend$app$current_dice_component_$_iter__12067(cljs.core.rest(s__12068__$2)));
+var dice = cljs.core.first(s__12501__$2);
+return cljs.core.cons(cljs.core.with_meta(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"img","img",1442687358),new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"src","src",-1651076051),["/images/dice-",cljs.core.name(new cljs.core.Keyword(null,"color","color",1011675173).cljs$core$IFn$_invoke$arity$1(dice)),"-",cljs.core.name(new cljs.core.Keyword(null,"face","face",-1356480717).cljs$core$IFn$_invoke$arity$1(dice)),".png"].join(''),new cljs.core.Keyword(null,"alt","alt",-3214426),"Descriptive text",new cljs.core.Keyword(null,"style","style",-496642736),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"width","width",-384071477),"80px",new cljs.core.Keyword(null,"height","height",1025178622),"auto"], null)], null)], null),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"key","key",-1516042587),cljs.core.random_uuid()], null)),zombiedice$frontend$app$current_dice_component_$_iter__12500(cljs.core.rest(s__12501__$2)));
 }
 } else {
 return null;

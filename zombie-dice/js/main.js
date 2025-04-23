@@ -9799,6 +9799,17 @@ var shadow$provide = {};
   function xb() {}
   function yb() {}
   function zb() {}
+  function sk() {}
+  function tk(a) {
+    if (null != a && null != a.nd) a = a.nd(a);
+    else {
+      var b = tk[r(null == a ? null : a)];
+      if (null != b) a = b.g ? b.g(a) : b.call(null, a);
+      else if (((b = tk._), null != b)) a = b.g ? b.g(a) : b.call(null, a);
+      else throw y("IReversible.-rseq", a);
+    }
+    return a;
+  }
   function Ab(a, b) {
     if (null != a && null != a.oc) a = a.oc(a, b);
     else {
@@ -10602,6 +10613,10 @@ var shadow$provide = {};
     var a = this.i.length - this.o;
     return 0 > a ? 0 : a;
   };
+  g.nd = function () {
+    var a = this.W(null);
+    return 0 < a ? new uk(this, a - 1, null) : null;
+  };
   g.R = function () {
     return sc(this);
   };
@@ -10645,6 +10660,98 @@ var shadow$provide = {};
   function Lc(a) {
     return 0 < a.length ? new J(a, 0, null) : null;
   }
+  function uk(a, b, c) {
+    this.pd = a;
+    this.o = b;
+    this.meta = c;
+    this.l = 32374990;
+    this.A = 8192;
+  }
+  g = uk.prototype;
+  g.toString = function () {
+    return Wb(this);
+  };
+  g.indexOf = (function () {
+    var a = null;
+    a = function (b, c) {
+      switch (arguments.length) {
+        case 1:
+          return O(this, b, 0);
+        case 2:
+          return O(this, b, c);
+      }
+      throw Error("Invalid arity: " + arguments.length);
+    };
+    a.g = function (b) {
+      return O(this, b, 0);
+    };
+    a.h = function (b, c) {
+      return O(this, b, c);
+    };
+    return a;
+  })();
+  g.lastIndexOf = (function () {
+    function a(c) {
+      return Q(this, c, P.g ? P.g(this) : P.call(null, this));
+    }
+    var b = null;
+    b = function (c, d) {
+      switch (arguments.length) {
+        case 1:
+          return a.call(this, c);
+        case 2:
+          return Q(this, c, d);
+      }
+      throw Error("Invalid arity: " + arguments.length);
+    };
+    b.g = a;
+    b.h = function (c, d) {
+      return Q(this, c, d);
+    };
+    return b;
+  })();
+  g.U = function () {
+    return this.meta;
+  };
+  g.ia = function () {
+    return 0 < this.o ? new uk(this.pd, this.o - 1, null) : null;
+  };
+  g.W = function () {
+    return this.o + 1;
+  };
+  g.R = function () {
+    return sc(this);
+  };
+  g.O = function (a, b) {
+    return Kc.h ? Kc.h(this, b) : Kc.call(null, this, b);
+  };
+  g.Y = function () {
+    return oc;
+  };
+  g.ca = function (a, b) {
+    return sd ? sd(b, this) : vk.call(null, b, this);
+  };
+  g.da = function (a, b, c) {
+    return td ? td(b, c, this) : vk.call(null, b, c, this);
+  };
+  g.ja = function () {
+    return A(this.pd, this.o);
+  };
+  g.ka = function () {
+    return 0 < this.o ? new uk(this.pd, this.o - 1, null) : oc;
+  };
+  g.T = function () {
+    return this;
+  };
+  g.V = function (a, b) {
+    return b === this.meta ? this : new uk(this.pd, this.o, b);
+  };
+  g.$ = function (a, b) {
+    return R.h ? R.h(b, this) : R.call(null, b, this);
+  };
+  uk.prototype[Ca] = function () {
+    return qc(this);
+  };
   tb._ = function (a, b) {
     return a === b;
   };
@@ -11697,6 +11804,16 @@ var shadow$provide = {};
       return e.h ? e.h(c, d) : e.call(null, c, d);
     }, b);
   }
+  function vk(a) {
+    switch (arguments.length) {
+      case 2:
+        return sd(arguments[0], arguments[1]);
+      case 3:
+        return td(arguments[0], arguments[1], arguments[2]);
+      default:
+        throw Error(["Invalid arity: ", z.g(arguments.length)].join(""));
+    }
+  }
   function sd(a, b) {
     var c = H(b);
     return c
@@ -12095,6 +12212,17 @@ var shadow$provide = {};
   Dd.prototype[Ca] = function () {
     return qc(this);
   };
+  function Lk(a) {
+    return (
+      null != a
+        ? a.l & 134217728 || t === a.qd || (a.l ? 0 : x(sk, a))
+        : x(sk, a)
+    )
+      ? (a = tk(a))
+        ? a
+        : oc
+      : Fa(Mc, oc, a);
+  }
   function Ed(a, b, c, d) {
     this.meta = a;
     this.first = b;
@@ -14279,6 +14407,9 @@ var shadow$provide = {};
       ? new W(this.meta, c, this.shift - 5, b.i[0], a, null)
       : new W(this.meta, c, this.shift, b, a, null);
   };
+  g.nd = function () {
+    return 0 < this.m ? new uk(this, this.m - 1, null) : null;
+  };
   g.R = function () {
     var a = this.v;
     return null != a ? a : (this.v = a = sc(this));
@@ -14783,6 +14914,11 @@ var shadow$provide = {};
       c = this.start,
       d = this.end - 1;
     return af.J ? af.J(a, b, c, d, null) : af.call(null, a, b, c, d, null);
+  };
+  g.nd = function () {
+    return this.start !== this.end
+      ? new uk(this, this.end - this.start - 1, null)
+      : null;
   };
   g.R = function () {
     var a = this.v;
@@ -15322,6 +15458,9 @@ var shadow$provide = {};
   };
   g.ob = function () {
     return new W(null, 1, 5, X, [this.key], null);
+  };
+  g.nd = function () {
+    return new J([this.C, this.key], 0, null);
   };
   g.R = function () {
     var a = this.v;
@@ -17471,10 +17610,488 @@ var shadow$provide = {};
       if (null != a) (b = M(a)), (c = Hb(c, C(a))), (a = b);
       else return Ib(c);
   }
+  function $k(a) {
+    return (function e(c, d) {
+      return new Id(
+        null,
+        function () {
+          var f;
+          a: {
+            var h = c;
+            for (f = d; ; ) {
+              var k = h;
+              h = S(k, 0, null);
+              if ((k = H(k)))
+                if (kd(f, h)) h = nc(k);
+                else {
+                  f = R(h, e(nc(k), Mc.h(f, h)));
+                  break a;
+                }
+              else {
+                f = null;
+                break a;
+              }
+            }
+          }
+          return f;
+        },
+        null,
+      );
+    })(a, hg);
+  }
   function V(a) {
     if (null != a && (a.A & 4096 || t === a.lc)) return a.name;
     if ("string" === typeof a) return a;
     throw Error(["Doesn't support name: ", z.g(a)].join(""));
+  }
+  function al(a, b) {
+    var c = Gb(de);
+    a = H(a);
+    for (b = H(b); ; )
+      if (a && b) {
+        var d = K(a),
+          e = K(b);
+        c = Jb(c, d, e);
+        a = M(a);
+        b = M(b);
+      } else return Ib(c);
+  }
+  function bl(a, b, c) {
+    this.start = a;
+    this.step = b;
+    this.count = c;
+    this.l = 82;
+    this.A = 0;
+  }
+  g = bl.prototype;
+  g.W = function () {
+    return this.count;
+  };
+  g.ja = function () {
+    return this.start;
+  };
+  g.S = function (a, b) {
+    return this.start + b * this.step;
+  };
+  g.oa = function (a, b, c) {
+    return 0 <= b && b < this.count ? this.start + b * this.step : c;
+  };
+  g.hc = function () {
+    if (1 >= this.count) throw Error("-drop-first of empty chunk");
+    return new bl(this.start + this.step, this.step, this.count - 1);
+  };
+  function cl(a, b, c) {
+    this.o = a;
+    this.end = b;
+    this.step = c;
+  }
+  cl.prototype.ba = function () {
+    return 0 < this.step ? this.o < this.end : this.o > this.end;
+  };
+  cl.prototype.next = function () {
+    var a = this.o;
+    this.o += this.step;
+    return a;
+  };
+  function dl(a, b, c, d, e, f) {
+    this.meta = a;
+    this.start = b;
+    this.end = c;
+    this.step = d;
+    this.m = e;
+    this.v = f;
+    this.l = 32375006;
+    this.A = 402944;
+  }
+  g = dl.prototype;
+  g.toString = function () {
+    return Wb(this);
+  };
+  g.indexOf = (function () {
+    var a = null;
+    a = function (b, c) {
+      switch (arguments.length) {
+        case 1:
+          return O(this, b, 0);
+        case 2:
+          return O(this, b, c);
+      }
+      throw Error("Invalid arity: " + arguments.length);
+    };
+    a.g = function (b) {
+      return O(this, b, 0);
+    };
+    a.h = function (b, c) {
+      return O(this, b, c);
+    };
+    return a;
+  })();
+  g.lastIndexOf = (function () {
+    function a(c) {
+      return Q(this, c, P(this));
+    }
+    var b = null;
+    b = function (c, d) {
+      switch (arguments.length) {
+        case 1:
+          return a.call(this, c);
+        case 2:
+          return Q(this, c, d);
+      }
+      throw Error("Invalid arity: " + arguments.length);
+    };
+    b.g = a;
+    b.h = function (c, d) {
+      return Q(this, c, d);
+    };
+    return b;
+  })();
+  g.S = function (a, b) {
+    if (0 <= b && b < this.W(null)) return this.start + b * this.step;
+    if (0 <= b && this.start > this.end && 0 === this.step) return this.start;
+    throw Error("Index out of bounds");
+  };
+  g.oa = function (a, b, c) {
+    return 0 <= b && b < this.W(null)
+      ? this.start + b * this.step
+      : 0 <= b && this.start > this.end && 0 === this.step
+        ? this.start
+        : c;
+  };
+  g.qa = function () {
+    return new cl(this.start, this.end, this.step);
+  };
+  g.U = function () {
+    return this.meta;
+  };
+  g.ia = function () {
+    return 0 < this.step
+      ? this.start + this.step < this.end
+        ? new dl(
+            null,
+            this.start + this.step,
+            this.end,
+            this.step,
+            Math.ceil((this.end - (this.start + this.step)) / this.step),
+            null,
+          )
+        : null
+      : this.start + this.step > this.end
+        ? new dl(
+            null,
+            this.start + this.step,
+            this.end,
+            this.step,
+            Math.ceil((this.end - (this.start + this.step)) / this.step),
+            null,
+          )
+        : null;
+  };
+  g.W = function () {
+    return this.m;
+  };
+  g.R = function () {
+    var a = this.v;
+    return null != a ? a : (this.v = a = sc(this));
+  };
+  g.O = function (a, b) {
+    return Kc(this, b);
+  };
+  g.Y = function () {
+    return oc;
+  };
+  g.ca = function (a, b) {
+    return Ac(this, b);
+  };
+  g.da = function (a, b, c) {
+    for (a = this.start; ; )
+      if (0 < this.step ? a < this.end : a > this.end) {
+        c = b.h ? b.h(c, a) : b.call(null, c, a);
+        if (yc(c)) return D(c);
+        a += this.step;
+      } else return c;
+  };
+  g.ja = function () {
+    return this.start;
+  };
+  g.ka = function () {
+    var a = this.ia();
+    return null == a ? oc : a;
+  };
+  g.T = function () {
+    return this;
+  };
+  g.Sb = function () {
+    var a = this.m;
+    return new bl(this.start, this.step, 32 > a ? a : 32);
+  };
+  g.Fb = function () {
+    if (32 >= this.m) return oc;
+    var a = this.start + 32 * this.step;
+    return 0 < this.step
+      ? this.end <= a
+        ? oc
+        : new dl(
+            null,
+            a,
+            this.end,
+            this.step,
+            Math.ceil((this.end - a) / this.step),
+            null,
+          )
+      : 0 > this.step
+        ? this.end >= a
+          ? oc
+          : new dl(
+              null,
+              a,
+              this.end,
+              this.step,
+              Math.ceil((this.end - a) / this.step),
+              null,
+            )
+        : this.end === a
+          ? oc
+          : new ue(null, -1, a, null);
+  };
+  g.V = function (a, b) {
+    return b === this.meta
+      ? this
+      : new dl(b, this.start, this.end, this.step, this.m, this.v);
+  };
+  g.$ = function (a, b) {
+    return R(b, this);
+  };
+  g.Ha = function (a, b) {
+    return 0 < b
+      ? b < this.m
+        ? new dl(
+            null,
+            this.start + this.step * b,
+            this.end,
+            this.step,
+            this.m - b,
+            null,
+          )
+        : null
+      : this;
+  };
+  g.ic = function () {
+    return H(this.Fb(null));
+  };
+  dl.prototype[Ca] = function () {
+    return qc(this);
+  };
+  function el(a, b, c, d, e, f, h) {
+    this.meta = a;
+    this.start = b;
+    this.end = c;
+    this.step = d;
+    this.la = e;
+    this.od = f;
+    this.v = h;
+    this.A = 140800;
+    this.l = 32374988;
+  }
+  g = el.prototype;
+  g.toString = function () {
+    return Wb(this);
+  };
+  g.indexOf = (function () {
+    var a = null;
+    a = function (b, c) {
+      switch (arguments.length) {
+        case 1:
+          return O(this, b, 0);
+        case 2:
+          return O(this, b, c);
+      }
+      throw Error("Invalid arity: " + arguments.length);
+    };
+    a.g = function (b) {
+      return O(this, b, 0);
+    };
+    a.h = function (b, c) {
+      return O(this, b, c);
+    };
+    return a;
+  })();
+  g.lastIndexOf = (function () {
+    function a(c) {
+      return Q(this, c, P(this));
+    }
+    var b = null;
+    b = function (c, d) {
+      switch (arguments.length) {
+        case 1:
+          return a.call(this, c);
+        case 2:
+          return Q(this, c, d);
+      }
+      throw Error("Invalid arity: " + arguments.length);
+    };
+    b.g = a;
+    b.h = function (c, d) {
+      return Q(this, c, d);
+    };
+    return b;
+  })();
+  function fl(a) {
+    if (null == a.la) {
+      var b = [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+      ];
+      a: {
+        var c = 0;
+        for (var d = a.start; ; )
+          if (32 > c) {
+            if (
+              ((b[c] = d),
+              (c += 1),
+              (d += a.step),
+              !(0 < a.step ? d < a.end : d > a.end))
+            ) {
+              c = a.la = new Ld(b, 0, c);
+              break a;
+            }
+          } else {
+            c = d;
+            break a;
+          }
+      }
+      null == a.la &&
+        ((a.la = new Ld(b, 0, 32)),
+        (0 < a.step ? c < a.end : c > a.end) &&
+          (a.od = new el(null, c, a.end, a.step, null, null, null)));
+    }
+  }
+  g.qa = function () {
+    return new cl(this.start, this.end, this.step);
+  };
+  g.U = function () {
+    return this.meta;
+  };
+  g.ia = function () {
+    return 0 < this.step
+      ? this.start + this.step < this.end
+        ? new el(
+            null,
+            this.start + this.step,
+            this.end,
+            this.step,
+            null,
+            null,
+            null,
+          )
+        : null
+      : this.start + this.step > this.end
+        ? new el(
+            null,
+            this.start + this.step,
+            this.end,
+            this.step,
+            null,
+            null,
+            null,
+          )
+        : null;
+  };
+  g.R = function () {
+    var a = this.v;
+    return null != a ? a : (this.v = a = sc(this));
+  };
+  g.O = function (a, b) {
+    return Kc(this, b);
+  };
+  g.Y = function () {
+    return oc;
+  };
+  g.ca = function (a, b) {
+    return sd(b, this);
+  };
+  g.da = function (a, b, c) {
+    for (a = this.start; ; )
+      if (0 < this.step ? a < this.end : a > this.end) {
+        c = b.h ? b.h(c, a) : b.call(null, c, a);
+        if (yc(c)) return D(c);
+        a += this.step;
+      } else return c;
+  };
+  g.ja = function () {
+    return this.start;
+  };
+  g.ka = function () {
+    var a = this.ia();
+    return null == a ? oc : a;
+  };
+  g.T = function () {
+    return this;
+  };
+  g.Sb = function () {
+    fl(this);
+    return this.la;
+  };
+  g.Fb = function () {
+    fl(this);
+    return null == this.od ? oc : this.od;
+  };
+  g.V = function (a, b) {
+    return b === this.meta
+      ? this
+      : new el(b, this.start, this.end, this.step, this.la, this.od, this.v);
+  };
+  g.$ = function (a, b) {
+    return R(b, this);
+  };
+  g.ic = function () {
+    return H(this.Fb(null));
+  };
+  el.prototype[Ca] = function () {
+    return qc(this);
+  };
+  function gl(a) {
+    return 1 >= a
+      ? oc
+      : jd(1) && jd(a) && jd(1)
+        ? new dl(null, 1, a, 1, Math.ceil(a - 1), null)
+        : new el(null, 1, a, 1, null, null, null);
+  }
+  function hl(a) {
+    a: for (var b = a; ; )
+      if ((b = H(b))) b = M(b);
+      else break a;
+    return a;
   }
   function jg(a, b) {
     if ("string" === typeof b)
@@ -17848,6 +18465,14 @@ var shadow$provide = {};
   Ed.prototype.P = function (a, b, c) {
     return kg(b, sg, "(", " ", ")", c, this);
   };
+  uk.prototype.Z = t;
+  uk.prototype.P = function (a, b, c) {
+    return kg(b, sg, "(", " ", ")", c, this);
+  };
+  dl.prototype.Z = t;
+  dl.prototype.P = function (a, b, c) {
+    return kg(b, sg, "(", " ", ")", c, this);
+  };
   Vf.prototype.Z = t;
   Vf.prototype.P = function (a, b, c) {
     return tg(this, sg, b, c);
@@ -17893,6 +18518,10 @@ var shadow$provide = {};
   v.prototype.Z = t;
   v.prototype.P = function (a, b, c) {
     return tg(this, sg, b, c);
+  };
+  el.prototype.Z = t;
+  el.prototype.P = function (a, b, c) {
+    return kg(b, sg, "(", " ", ")", c, this);
   };
   Yf.prototype.Z = t;
   Yf.prototype.P = function (a, b, c) {
@@ -19966,10 +20595,10 @@ var shadow$provide = {};
     return hk(this, b, c, d, e);
   };
   var rk,
-    sk = de,
-    tk = Dg("reagent-compiler"),
-    uk = w(ai.g(sk)) ? lk : jk,
-    vk = jc(sk, ch, function (a, b) {
+    il = de,
+    jl = Dg("reagent-compiler"),
+    kl = w(ai.g(il)) ? lk : jk,
+    ll = jc(il, ch, function (a, b) {
       a = bk(mk, b);
       if (null == a) {
         var c = M(jg(Zj, V(b)));
@@ -19983,7 +20612,7 @@ var shadow$provide = {};
       }
       return a;
     });
-  rk = new qk(sk, tk, uk, vk, de);
+  rk = new qk(il, jl, kl, ll, de);
   var wk = Fi(9, {});
   function xk(a) {
     a = ha(a, "comp");
@@ -20190,6 +20819,9 @@ var shadow$provide = {};
       ],
       null,
     );
+  function ml(a) {
+    return Ng.g(D(a));
+  }
   function Jk(a, b) {
     var c = Ng.g(a);
     return Aa(Hk.g ? Hk.g(b) : Hk.call(null, b))
@@ -20198,13 +20830,26 @@ var shadow$provide = {};
         ? U.j(a, Ng, b)
         : xg(Lc(["Invalid state transition:", c, "→", b]));
   }
+  function nl(a) {
+    return Ch.g(a);
+  }
   function Kk(a) {
     return ve(function (b) {
       return 13 > th.g(b);
-    }, Ch.g(a));
+    }, nl(a));
   }
-  function Lk(a) {
-    return K(Ch.g(a));
+  function ol(a, b) {
+    a = nl(a);
+    var c = Lk(od(ld, $k(qe.h(th, a))));
+    c = al(c, gl(P(c) + 1));
+    a = th.g(
+      K(
+        ve(function (d) {
+          return N.h(oh.g(d), b);
+        }, a),
+      ),
+    );
+    return F(c, a);
   }
   function Mk(a) {
     var b = Sd.s(
@@ -20231,6 +20876,18 @@ var shadow$provide = {};
       de,
       a,
     );
+  }
+  function pl(a) {
+    var b = K(nl(a)),
+      c = nl(a),
+      d = th.g(Nk(Hh.g(a))),
+      e = Ng.g(a);
+    if (N.h(e, Og)) {
+      var f = (e = U.j);
+      b = U.j(b, th, (b.g ? b.g(th) : b.call(null, th)) + d);
+      a = e.call(U, a, Ch, f.call(U, c, 0, b));
+    }
+    return a;
   }
   function Ok() {
     var a = Mk(Fk);
@@ -20276,8 +20933,8 @@ var shadow$provide = {};
                   [
                     Rg,
                     [
-                      z.g(oh.g(Lk(D(a)))),
-                      " has been shot too many times!",
+                      z.g(oh.g(K(nl(D(a))))),
+                      " has been shot too many times. You loose this rounds brains",
                     ].join(""),
                   ],
                   null,
@@ -20329,7 +20986,7 @@ var shadow$provide = {};
                   2,
                   5,
                   X,
-                  [Rg, [z.g(oh.g(Lk(D(a)))), " has won!"].join("")],
+                  [Rg, [z.g(oh.g(K(nl(D(a))))), " has won!"].join("")],
                   null,
                 ),
               ],
@@ -20343,8 +21000,8 @@ var shadow$provide = {};
     );
   }
   function Rk(a) {
-    var b = qd(ri, Ch.g(D(a))),
-      c = Lk(D(a));
+    var b = qd(ri, nl(D(a))),
+      c = K(nl(D(a)));
     return 0 < P(b)
       ? new W(
           null,
@@ -20472,233 +21129,252 @@ var shadow$provide = {};
               [
                 Qg,
                 new v(null, 1, [Y, "[\x26_tr:last-child]:border-0"], null),
-                (function () {
-                  return (function f(e) {
-                    return new Id(
-                      null,
-                      function () {
-                        for (;;) {
-                          var h = H(e);
-                          if (h) {
-                            if (ed(h)) {
-                              var k = Nb(h),
-                                l = P(k),
-                                n = Md(l);
-                              return (function () {
-                                for (var B = 0; ; )
-                                  if (B < l) {
-                                    var E = A(k, B),
-                                      I = ce(E);
-                                    E = F(I, oh);
-                                    var T = F(I, ri);
-                                    I = F(I, th);
-                                    var Z = n,
-                                      da = N.h(E, oh.g(c)),
-                                      ta = da
-                                        ? "border-b bg-primary/10"
-                                        : "border-b";
-                                    da = da
-                                      ? [z.g(E), " \ud83c\udfb2"].join("")
-                                      : E;
-                                    Z.add(
+                hl(
+                  (function () {
+                    return (function f(e) {
+                      return new Id(
+                        null,
+                        function () {
+                          for (;;) {
+                            var h = H(e);
+                            if (h) {
+                              if (ed(h)) {
+                                var k = Nb(h),
+                                  l = P(k),
+                                  n = Md(l);
+                                return (function () {
+                                  for (var B = 0; ; )
+                                    if (B < l) {
+                                      var E = A(k, B),
+                                        I = ce(E);
+                                      E = F(I, oh);
+                                      var T = F(I, ri);
+                                      I = F(I, th);
+                                      var Z = n,
+                                        da = N.h(E, oh.g(c)),
+                                        ta = da
+                                          ? "border-b bg-primary/10"
+                                          : "border-b",
+                                        kb = ol(D(a), E),
+                                        kh = ml(a);
+                                      da = da
+                                        ? N.h(kh, si)
+                                          ? [z.g(E), " \ud83c\udfc6"].join("")
+                                          : [z.g(E), " \ud83c\udfb2"].join("")
+                                        : E;
+                                      Z.add(
+                                        new W(
+                                          null,
+                                          6,
+                                          5,
+                                          X,
+                                          [
+                                            Ah,
+                                            new v(
+                                              null,
+                                              2,
+                                              [oi, E, Y, ta],
+                                              null,
+                                            ),
+                                            new W(
+                                              null,
+                                              3,
+                                              5,
+                                              X,
+                                              [
+                                                vh,
+                                                new v(
+                                                  null,
+                                                  1,
+                                                  [
+                                                    Y,
+                                                    "p-2 align-middle font-medium",
+                                                  ],
+                                                  null,
+                                                ),
+                                                da,
+                                              ],
+                                              null,
+                                            ),
+                                            new W(
+                                              null,
+                                              3,
+                                              5,
+                                              X,
+                                              [
+                                                vh,
+                                                new v(
+                                                  null,
+                                                  1,
+                                                  [
+                                                    Y,
+                                                    "p-2 align-middle text-right",
+                                                  ],
+                                                  null,
+                                                ),
+                                                T,
+                                              ],
+                                              null,
+                                            ),
+                                            new W(
+                                              null,
+                                              3,
+                                              5,
+                                              X,
+                                              [
+                                                vh,
+                                                new v(
+                                                  null,
+                                                  1,
+                                                  [
+                                                    Y,
+                                                    "p-2 align-middle text-right",
+                                                  ],
+                                                  null,
+                                                ),
+                                                kb,
+                                              ],
+                                              null,
+                                            ),
+                                            new W(
+                                              null,
+                                              3,
+                                              5,
+                                              X,
+                                              [
+                                                vh,
+                                                new v(
+                                                  null,
+                                                  1,
+                                                  [
+                                                    Y,
+                                                    "p-2 align-middle text-right",
+                                                  ],
+                                                  null,
+                                                ),
+                                                I,
+                                              ],
+                                              null,
+                                            ),
+                                          ],
+                                          null,
+                                        ),
+                                      );
+                                      B += 1;
+                                    } else return !0;
+                                })()
+                                  ? Od(n.la(), f(Ob(h)))
+                                  : Od(n.la(), null);
+                              }
+                              var m = K(h);
+                              m = ce(m);
+                              var p = F(m, oh),
+                                q = F(m, ri),
+                                u = F(m, th);
+                              return R(
+                                (function () {
+                                  var B = N.h(p, oh.g(c)),
+                                    E = B
+                                      ? "border-b bg-primary/10"
+                                      : "border-b",
+                                    I = ol(D(a), p),
+                                    T = ml(a);
+                                  B = B
+                                    ? N.h(T, si)
+                                      ? [z.g(p), " \ud83c\udfc6"].join("")
+                                      : [z.g(p), " \ud83c\udfb2"].join("")
+                                    : p;
+                                  return new W(
+                                    null,
+                                    6,
+                                    5,
+                                    X,
+                                    [
+                                      Ah,
+                                      new v(null, 2, [oi, p, Y, E], null),
                                       new W(
                                         null,
-                                        6,
+                                        3,
                                         5,
                                         X,
                                         [
-                                          Ah,
-                                          new v(null, 2, [oi, E, Y, ta], null),
-                                          new W(
+                                          vh,
+                                          new v(
                                             null,
-                                            3,
-                                            5,
-                                            X,
-                                            [
-                                              vh,
-                                              new v(
-                                                null,
-                                                1,
-                                                [
-                                                  Y,
-                                                  "p-2 align-middle font-medium",
-                                                ],
-                                                null,
-                                              ),
-                                              da,
-                                            ],
+                                            1,
+                                            [Y, "p-2 align-middle font-medium"],
                                             null,
                                           ),
-                                          new W(
-                                            null,
-                                            3,
-                                            5,
-                                            X,
-                                            [
-                                              vh,
-                                              new v(
-                                                null,
-                                                1,
-                                                [
-                                                  Y,
-                                                  "p-2 align-middle text-right",
-                                                ],
-                                                null,
-                                              ),
-                                              T,
-                                            ],
-                                            null,
-                                          ),
-                                          new W(
-                                            null,
-                                            3,
-                                            5,
-                                            X,
-                                            [
-                                              vh,
-                                              new v(
-                                                null,
-                                                1,
-                                                [
-                                                  Y,
-                                                  "p-2 align-middle text-right",
-                                                ],
-                                                null,
-                                              ),
-                                              0,
-                                            ],
-                                            null,
-                                          ),
-                                          new W(
-                                            null,
-                                            3,
-                                            5,
-                                            X,
-                                            [
-                                              vh,
-                                              new v(
-                                                null,
-                                                1,
-                                                [
-                                                  Y,
-                                                  "p-2 align-middle text-right",
-                                                ],
-                                                null,
-                                              ),
-                                              I,
-                                            ],
-                                            null,
-                                          ),
+                                          B,
                                         ],
                                         null,
                                       ),
-                                    );
-                                    B += 1;
-                                  } else return !0;
-                              })()
-                                ? Od(n.la(), f(Ob(h)))
-                                : Od(n.la(), null);
+                                      new W(
+                                        null,
+                                        3,
+                                        5,
+                                        X,
+                                        [
+                                          vh,
+                                          new v(
+                                            null,
+                                            1,
+                                            [Y, "p-2 align-middle text-right"],
+                                            null,
+                                          ),
+                                          q,
+                                        ],
+                                        null,
+                                      ),
+                                      new W(
+                                        null,
+                                        3,
+                                        5,
+                                        X,
+                                        [
+                                          vh,
+                                          new v(
+                                            null,
+                                            1,
+                                            [Y, "p-2 align-middle text-right"],
+                                            null,
+                                          ),
+                                          I,
+                                        ],
+                                        null,
+                                      ),
+                                      new W(
+                                        null,
+                                        3,
+                                        5,
+                                        X,
+                                        [
+                                          vh,
+                                          new v(
+                                            null,
+                                            1,
+                                            [Y, "p-2 align-middle text-right"],
+                                            null,
+                                          ),
+                                          u,
+                                        ],
+                                        null,
+                                      ),
+                                    ],
+                                    null,
+                                  );
+                                })(),
+                                f(nc(h)),
+                              );
                             }
-                            var m = K(h);
-                            m = ce(m);
-                            var p = F(m, oh),
-                              q = F(m, ri),
-                              u = F(m, th);
-                            return R(
-                              (function () {
-                                var B = N.h(p, oh.g(c)),
-                                  E = B ? "border-b bg-primary/10" : "border-b";
-                                B = B ? [z.g(p), " \ud83c\udfb2"].join("") : p;
-                                return new W(
-                                  null,
-                                  6,
-                                  5,
-                                  X,
-                                  [
-                                    Ah,
-                                    new v(null, 2, [oi, p, Y, E], null),
-                                    new W(
-                                      null,
-                                      3,
-                                      5,
-                                      X,
-                                      [
-                                        vh,
-                                        new v(
-                                          null,
-                                          1,
-                                          [Y, "p-2 align-middle font-medium"],
-                                          null,
-                                        ),
-                                        B,
-                                      ],
-                                      null,
-                                    ),
-                                    new W(
-                                      null,
-                                      3,
-                                      5,
-                                      X,
-                                      [
-                                        vh,
-                                        new v(
-                                          null,
-                                          1,
-                                          [Y, "p-2 align-middle text-right"],
-                                          null,
-                                        ),
-                                        q,
-                                      ],
-                                      null,
-                                    ),
-                                    new W(
-                                      null,
-                                      3,
-                                      5,
-                                      X,
-                                      [
-                                        vh,
-                                        new v(
-                                          null,
-                                          1,
-                                          [Y, "p-2 align-middle text-right"],
-                                          null,
-                                        ),
-                                        0,
-                                      ],
-                                      null,
-                                    ),
-                                    new W(
-                                      null,
-                                      3,
-                                      5,
-                                      X,
-                                      [
-                                        vh,
-                                        new v(
-                                          null,
-                                          1,
-                                          [Y, "p-2 align-middle text-right"],
-                                          null,
-                                        ),
-                                        u,
-                                      ],
-                                      null,
-                                    ),
-                                  ],
-                                  null,
-                                );
-                              })(),
-                              f(nc(h)),
-                            );
+                            return null;
                           }
-                          return null;
-                        }
-                      },
-                      null,
-                    );
-                  })(b);
-                })(),
+                        },
+                        null,
+                      );
+                    })(b);
+                  })(),
+                ),
               ],
               null,
             ),
@@ -21188,10 +21864,10 @@ var shadow$provide = {};
     var d = D(b);
     2 > P(d) || 10 < P(d)
       ? (b = !1)
-      : ((b = ke(le.h(N, d), qe.h(oh, Ch.g(c)))),
-        (b = w(b) ? !1 : 5 <= P(Ch.g(c)) ? !1 : !0));
+      : ((b = ke(le.h(N, d), qe.h(oh, nl(c)))),
+        (b = w(b) ? !1 : 5 <= P(nl(c)) ? !1 : !0));
     if (b) {
-      b = Ch.g(c);
+      b = nl(c);
       var e = 1 + P(b);
       e = ce(Lc([oh, d, ri, e]));
       d = F(e, oh);
@@ -21314,7 +21990,7 @@ var shadow$provide = {};
             Vh,
             !0,
             Mh,
-            2 > P(Ch.g(D(a))),
+            2 > P(nl(D(a))),
             Yh,
             function () {
               if (b) {
@@ -21332,8 +22008,8 @@ var shadow$provide = {};
   }
   function Wk(a) {
     var b = mi.g(D(a)),
-      c = P(Ch.g(D(a))),
-      d = Lk(D(a));
+      c = P(nl(D(a))),
+      d = K(nl(D(a)));
     d = ri.g(d);
     var e = P(Wh.g(D(a)));
     return new W(
@@ -21648,7 +22324,7 @@ var shadow$provide = {};
     );
   }
   function Yk(a) {
-    return ee(Ng.g(D(a)), di)
+    return ee(ml(a), di)
       ? new W(
           null,
           7,
@@ -21658,7 +22334,7 @@ var shadow$provide = {};
             ii,
             new W(null, 2, 5, X, [Wk, a], null),
             (function () {
-              var b = oh.h(Lk(D(a)), "n/a");
+              var b = oh.h(K(nl(D(a))), "n/a");
               return new W(
                 null,
                 2,
@@ -21711,8 +22387,8 @@ var shadow$provide = {};
               ],
               null,
             ),
-            N.h(Ng.g(D(a)), Gh) ? new W(null, 2, 5, X, [Pk, a], null) : null,
-            N.h(Ng.g(D(a)), si) ? new W(null, 2, 5, X, [Qk, a], null) : null,
+            N.h(ml(a), Gh) ? new W(null, 2, 5, X, [Pk, a], null) : null,
+            N.h(ml(a), si) ? new W(null, 2, 5, X, [Qk, a], null) : null,
             new W(
               null,
               4,
@@ -21744,7 +22420,7 @@ var shadow$provide = {};
                         Mh,
                         N.h(Ng.g(D(a)), Gh) ||
                           0 >= P(Wh.g(D(a))) ||
-                          N.h(Ng.g(D(a)), si),
+                          N.h(ml(a), si),
                         Yh,
                         function () {
                           var b = D(a);
@@ -21769,28 +22445,11 @@ var shadow$provide = {};
                             null,
                           );
                           b = U.j(b, Hh, R(c, e));
-                          d = th.g(Lk(b));
+                          d = th.g(K(nl(b)));
                           e = th.g(Nk(Hh.g(b)));
                           c = Th.g(Nk(Hh.g(b)));
                           d += e;
-                          3 <= c
-                            ? (xg(
-                                Lc([
-                                  "Oh no you got shot too many times, you loose all your brains from this round!",
-                                ]),
-                              ),
-                              (b = Jk(b, Gh)))
-                            : 13 <= d &&
-                              (xg(
-                                Lc([
-                                  [
-                                    "Player ",
-                                    z.g(oh.g(Lk(b))),
-                                    " has won the game!",
-                                  ].join(""),
-                                ]),
-                              ),
-                              (b = Jk(b, si)));
+                          b = 3 <= c ? Jk(b, Gh) : 13 <= d ? Jk(pl(b), si) : b;
                           return oe(a, b);
                         },
                       ],
@@ -21815,31 +22474,20 @@ var shadow$provide = {};
                         sh,
                         wh,
                         Mh,
-                        N.h(Ng.g(D(a)), si),
+                        N.h(ml(a), si),
                         Yh,
                         function () {
-                          var b = D(a);
-                          var c = Lk(b),
-                            d = Ch.g(b),
-                            e = th.g(Nk(Hh.g(b))),
-                            f = Ng.g(b);
-                          if (N.h(f, Og)) {
-                            var h = (f = U.j);
-                            c = U.j(
-                              c,
-                              th,
-                              (c.g ? c.g(th) : c.call(null, th)) + e,
-                            );
-                            b = f.call(U, b, Ch, h.call(U, d, 0, c));
-                          }
-                          d = Kk(b);
+                          var b = pl(D(a));
+                          var c = Kk(b);
                           b = U.j(
                             b,
                             Ch,
-                            Te(Sd.h(nc(d), new W(null, 1, 5, X, [K(d)], null))),
+                            Te(Sd.h(nc(c), new W(null, 1, 5, X, [K(c)], null))),
                           );
                           b = U.j(b, Hh, oc);
-                          b = N.h(1, ri.g(Lk(b))) ? U.j(b, mi, mi.g(b) + 1) : b;
+                          b = N.h(1, ri.g(K(nl(b))))
+                            ? U.j(b, mi, mi.g(b) + 1)
+                            : b;
                           b = Jk(Mk(b), Og);
                           return oe(a, b);
                         },
@@ -21892,7 +22540,7 @@ var shadow$provide = {};
   }
   xg(Lc(["Zombie Dice starting"]));
   Ok();
-  var $k = document.getElementById("root");
+  var ql = document.getElementById("root");
   (function (a) {
     var b = new W(
       null,
@@ -21927,6 +22575,6 @@ var shadow$provide = {};
         },
       }),
     );
-  })(wk.createRoot($k));
+  })(wk.createRoot(ql));
 }).call(this);
 

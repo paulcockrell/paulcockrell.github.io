@@ -45,6 +45,15 @@ return ((13) > new cljs.core.Keyword(null,"brains","brains",-64810970).cljs$core
 zombiedice.state.state_manager.get_current_player = (function zombiedice$state$state_manager$get_current_player(game_state){
 return cljs.core.first(zombiedice.state.state_manager.get_players(game_state));
 });
+zombiedice.state.state_manager.get_player_rank = (function zombiedice$state$state_manager$get_player_rank(game_state,name){
+var players = zombiedice.state.state_manager.get_players(game_state);
+var sorted_scores = cljs.core.reverse(cljs.core.sort.cljs$core$IFn$_invoke$arity$1(cljs.core.distinct.cljs$core$IFn$_invoke$arity$1(cljs.core.map.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"brains","brains",-64810970),players))));
+var score__GT_rank = cljs.core.zipmap(sorted_scores,cljs.core.range.cljs$core$IFn$_invoke$arity$2((1),(cljs.core.count(sorted_scores) + (1))));
+var player_score = new cljs.core.Keyword(null,"brains","brains",-64810970).cljs$core$IFn$_invoke$arity$1(cljs.core.first(cljs.core.filter.cljs$core$IFn$_invoke$arity$2((function (p1__12311_SHARP_){
+return cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"name","name",1843675177).cljs$core$IFn$_invoke$arity$1(p1__12311_SHARP_),name);
+}),players)));
+return cljs.core.get.cljs$core$IFn$_invoke$arity$2(score__GT_rank,player_score);
+});
 zombiedice.state.state_manager.get_current_dice = (function zombiedice$state$state_manager$get_current_dice(game_state){
 return new cljs.core.Keyword(null,"current-dice","current-dice",-1885981762).cljs$core$IFn$_invoke$arity$1(game_state);
 });
@@ -89,8 +98,8 @@ return game_state;
 }
 });
 zombiedice.state.state_manager.add_dice = (function zombiedice$state$state_manager$add_dice(var_args){
-var G__12531 = arguments.length;
-switch (G__12531) {
+var G__12313 = arguments.length;
+switch (G__12313) {
 case 2:
 return zombiedice.state.state_manager.add_dice.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -123,9 +132,9 @@ return cljs.core.assoc.cljs$core$IFn$_invoke$arity$variadic(game_state,new cljs.
 zombiedice.state.state_manager.roll_dice = (function zombiedice$state$state_manager$roll_dice(game_state){
 var last_round_feet_dice = zombiedice.entities.dice.filter_feet(new cljs.core.Keyword(null,"current-dice","current-dice",-1885981762).cljs$core$IFn$_invoke$arity$1(game_state));
 var number_of_new_dices_to_take = ((((0) < cljs.core.count(last_round_feet_dice)))?((3) - cljs.core.count(last_round_feet_dice)):(3));
-var vec__12532 = zombiedice.entities.dice.take_dice(new cljs.core.Keyword(null,"remaining-dice","remaining-dice",1021652685).cljs$core$IFn$_invoke$arity$1(game_state),number_of_new_dices_to_take);
-var current_dice = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__12532,(0),null);
-var remaining_dice = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__12532,(1),null);
+var vec__12314 = zombiedice.entities.dice.take_dice(new cljs.core.Keyword(null,"remaining-dice","remaining-dice",1021652685).cljs$core$IFn$_invoke$arity$1(game_state),number_of_new_dices_to_take);
+var current_dice = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__12314,(0),null);
+var remaining_dice = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__12314,(1),null);
 var new_dice = cljs.core.into.cljs$core$IFn$_invoke$arity$2(current_dice,zombiedice.entities.dice.get_colors(last_round_feet_dice));
 return zombiedice.state.state_manager.add_dice.cljs$core$IFn$_invoke$arity$3(game_state,zombiedice.entities.dice.roll_dices(new_dice),remaining_dice);
 });
@@ -188,14 +197,10 @@ var new_state = zombiedice.state.state_manager.set_action(cljs.core.deref(game_s
 return zombiedice.state.state_manager.save_game_state_BANG_(game_state,new_state);
 });
 zombiedice.state.state_manager.loose_turn = (function zombiedice$state$state_manager$loose_turn(game_state){
-cljs.core.prn.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2(["Oh no you got shot too many times, you loose all your brains from this round!"], 0));
-
 return zombiedice.state.state_manager.set_action(game_state,new cljs.core.Keyword(null,"turn-over","turn-over",225020578));
 });
 zombiedice.state.state_manager.win_game = (function zombiedice$state$state_manager$win_game(game_state){
-cljs.core.prn.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([["Player ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(new cljs.core.Keyword(null,"name","name",1843675177).cljs$core$IFn$_invoke$arity$1(zombiedice.state.state_manager.get_current_player(game_state)))," has won the game!"].join('')], 0));
-
-return zombiedice.state.state_manager.set_action(game_state,new cljs.core.Keyword(null,"game-over","game-over",-607322695));
+return zombiedice.state.state_manager.set_action(zombiedice.state.state_manager.update_player_brains(game_state),new cljs.core.Keyword(null,"game-over","game-over",-607322695));
 });
 zombiedice.state.state_manager.check_hand = (function zombiedice$state$state_manager$check_hand(game_state){
 var current_player_brains = zombiedice.state.state_manager.get_current_player_brains(game_state);
